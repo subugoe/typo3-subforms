@@ -1,0 +1,37 @@
+<f:layout name="forms" />
+
+<f:section name="content">
+	<f:flashMessages renderMode="div" style="background-color: #dee1e7; padding: 12px;"/>
+
+	<f:form enctype="multipart/form-data" controller="Feedback" action="create" method="post" name="feedback"
+			object="{feedback}" class="feedback">
+		<f:form.errors for="feedback">
+			<div style="background-color: #dee1e7; padding: 12px;">
+				<f:for each="{error.errors}" as="fieldError">
+					<div><f:translate key="tx_subforms.error" /> <br /> {fieldError.message}</div>
+				</f:for>
+			</div>
+		</f:form.errors>
+		<fieldset name="feedbackform">
+		<div class="fieldwrap">
+			<label for="feedback-message">
+				<f:translate key="tx_subforms_domain_model_feedback.message"/><f:if condition="{page}"> <f:translate key="tx_subforms_domain_model_feedback.forPage" /> <em>{page.title}</em></f:if>
+			</label>
+			<f:form.textarea name="feedback-message" id="feedback-message" property="message" rows="5" cols="60" class="wideFormInput" />
+		</div>
+		<div class="fieldwrap">
+
+			<label for="feedback-emailAddress">
+				<f:translate key="tx_subforms_domain_model_feedback.emailAddress"/>
+			</label>
+		<f:form.textfield name="feedback-emailAddress" type="email" id="feedback-emailAddress" property="emailAddress" class="wideFormInput"/>
+		</div>
+			<f:form.hidden name="pageId" property="pageId" value="{feedback.pageId}"/>
+
+		</fieldset>
+		<div class="fieldwrap">
+			<f:form.submit value="{f:translate(key:'tx_subforms.submit')}"/>
+		</div>
+
+	</f:form>
+</f:section>

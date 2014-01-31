@@ -1,0 +1,34 @@
+plugin.tx_subforms {
+	settings {
+		view {
+			templateRootPath = {$plugin.tx_subforms.view.templateRootPath}
+			partialRootPath = {$plugin.tx_subforms.view.partialRootPath}
+			layoutRootPath = {$plugin.tx_subforms.view.layoutRootPath}
+		}
+		mail{
+			buecherwunsch {
+				toMail = {$plugin.tx_subforms.mail.buecherwunsch.toMail}
+				fromMail = {$plugin.tx_subforms.mail.buecherwunsch.fromMail}
+				fromName = {$plugin.tx_subforms.mail.buecherwunsch.fromName}
+				counterStart = {$plugin.tx_subforms.mail.buecherwunsch.counterStart}
+			}
+			feedback {
+				toMail = {$plugin.tx_subforms.mail.feedback.toMail}
+				fromMail = {$plugin.tx_subforms.mail.feedback.fromMail}
+			}
+		}
+		persistence{
+			enableAutomaticCacheClearing = 1
+			storagePid = {$plugin.tx_subforms.persistence.storagePid}
+		}
+	}
+		persistence {
+    		classes {
+    			Tx_Subforms_Domain_Model_Page {
+    				mapping {
+    					tableName = pages
+    				}
+    			}
+    		}
+    	}
+}

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://w3l.local/ausleihen-verlaengern/erwerbungsvorschlaege/buecherwunsch-fuer-studierende/" />
+<title>Buecherwunsch</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Buecherwunsch</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/ausleihen-verlaengern/erwerbungsvorschlaege/buecherwunsch-fuer-studierende/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=buecherwunsch-title</td>
+	<td>Android for PHP Developers</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=buecherwunsch-author</td>
+	<td>Steve Jablonsky</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=buecherwunsch-editor</td>
+	<td>O'Reilly</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=buecherwunsch-publishingYear</td>
+	<td>2013</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=buecherwunsch-issue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=buecherwunsch-isbn</td>
+	<td>618680468</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=buecherwunsch-additionalData</td>
+	<td>Schoen schnell</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=buecherwunsch-name</td>
+	<td>Pfennigstorf, Ingo</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=buecherwunsch-userId</td>
+	<td>04608706870</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=buecherwunsch-emailAddress</td>
+	<td>i.pfennigstorf@gmail.com</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=neededFor_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=buecherwunsch-deadline</td>
+	<td>20.02.2012</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=buecherwunsch-tutor</td>
+	<td>Edlich</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=buecherwunsch-faculty</td>
+	<td>label=Juristische Fakultät</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=buecherwunsch-instituteName</td>
+	<td>keins</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=buecherwunsch-remarks</td>
+	<td>Eine schnelle Lieferung waere toll</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=form[name=&quot;buecherwunsch&quot;] &gt; input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=t3-footer</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,26 @@
+plugin.tx_subforms {
+	view {
+		# cat=plugin.tx_subforms/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:subforms/Resources/Private/Templates/
+		# cat=plugin.tx_subforms/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:subforms/Resources/Private/Partials/
+		# cat=plugin.tx_subforms/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:subforms/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_subforms//a; type=int+; label=Default storage PID
+		storagePid =
+	}
+	mail {
+		feedback {
+			toMail =
+			fromMail =
+		}
+		buecherwunsch {
+			toMail =
+			fromMail =
+			fromName =
+			counterStart = 0
+		}
+	}
+}

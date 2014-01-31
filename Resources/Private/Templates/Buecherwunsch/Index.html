@@ -1,0 +1,176 @@
+<f:layout name="forms"/>
+
+<f:section name="content">
+	<f:flashMessages renderMode="div" style="background-color: #dfd; padding: 12px;"/>
+
+
+	<f:form enctype="multipart/form-data" controller="Buecherwunsch" action="create" method="post" name="buecherwunsch"
+			object="{buecherwunsch}" section="buecherwunsch">
+		<f:form.errors for="buecherwunsch">
+			<div style="background-color: #fdd; padding: 12px;">
+				<b>{error.propertyName}</b>
+				<f:for each="{error.errors}" as="fieldError">
+					<div>{fieldError.code}: {fieldError.message}</div>
+				</f:for>
+			</div>
+		</f:form.errors>
+		<fieldset>
+			<legend><f:translate key="tx_subforms_domain_model_buecherwunsch.legend" /></legend>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-isbn">
+					<f:translate key="tx_subforms_domain_model_buecherwunsch.isbn"/>
+				</label>
+				<f:form.textfield property="isbn" id="buecherwunsch-isbn"/>
+			</div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-title">
+					<f:translate key="tx_subforms_domain_model_buecherwunsch.title"/>
+				</label>
+				<f:form.textfield property="title" id="buecherwunsch-title" required="required" />
+				<div id="buecherwunsch-title-suggest" class="suggest"></div>
+			</div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-author">
+					<f:translate key="tx_subforms_domain_model_buecherwunsch.author"/>
+				</label>
+				<f:form.textfield property="author" id="buecherwunsch-author" value="{buecherwunsch.author}"/>
+			</div>
+
+			<div class="fieldwrap">
+				<label for="buecherwunsch-editor">
+					<f:translate key="tx_subforms_domain_model_buecherwunsch.editor"/>
+				</label>
+				<f:form.textfield property="editor" id="buecherwunsch-editor"/>
+			</div>
+
+			<div class="fieldwrap">
+				<label for="buecherwunsch-publishingYear">
+					<f:translate key="tx_subforms_domain_model_buecherwunsch.publishingYear"/>
+				</label>
+				<f:form.textfield property="publishingYear" id="buecherwunsch-publishingYear" required="required" />
+			</div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-issue">
+					<f:translate key="tx_subforms_domain_model_buecherwunsch.issue"/>
+				</label>
+				<f:form.textfield property="issue" id="buecherwunsch-issue"/>
+			</div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-additionalData">
+					<f:translate key="tx_subforms_domain_model_buecherwunsch.additionalData"/>
+				</label>
+				<f:form.textfield property="additionalData" value="" id="buecherwunsch-additionalData"/>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Adresse</legend>
+			<label for="buecherwunsch-name">
+				<f:translate key="tx_subforms_domain_model_buecherwunsch.name"/>
+			</label>
+			<f:form.textfield property="name" value="" id="buecherwunsch-name" required="required"/>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-userId">
+					<f:translate key="tx_subforms_domain_model_buecherwunsch.userId"/>
+				</label>
+				<f:form.textfield property="userId" value="" id="buecherwunsch-userId" required="required"/>
+			</div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-emailAddress">
+					<f:translate key="tx_subforms_domain_model_buecherwunsch.emailAddress"/>
+				</label>
+				<f:form.textfield property="emailAddress" type="email" id="buecherwunsch-emailAddress" required="required"/>
+			</div>
+			<div class="fieldwrap">
+				<p>
+					<f:translate key="tx_subforms_domain_model_buecherwunsch.neededFor"/>
+				</p>
+				<div class="fieldwrap fieldwrap_radio">
+					<f:form.radio property="neededFor" id="neededFor_1" value="Hausarbeit" checked="TRUE"/>
+					<label for="neededFor_1">
+						<f:translate key="tx_subforms_domain_model_buecherwunsch.neededFor.hausarbeit"/>
+					</label>
+				</div>
+				<div class="fieldwrap fieldwrap_radio">
+					<f:form.radio property="neededFor" id="neededFor_2" value="Bachelorarbeit"/>
+					<label for="neededFor_2">
+						<f:translate key="tx_subforms_domain_model_buecherwunsch.neededFor.bachelorarbeit"/>
+					</label>
+				</div>
+
+				<div class="fieldwrap fieldwrap_radio">
+					<f:form.radio property="neededFor" id="neededFor_3" value="Masterarbeit"/>
+					<label for="neededFor_3">
+						<f:translate key="tx_subforms_domain_model_buecherwunsch.neededFor.masterarbeit"/>
+					</label>
+				</div>
+
+				<div class="fieldwrap fieldwrap_radio">
+					<f:form.radio property="neededFor" id="neededFor_4" value="Diplomarbeit"/>
+					<label for="neededFor_4">
+						<f:translate key="tx_subforms_domain_model_buecherwunsch.neededFor.diplomarbeit"/>
+					</label>
+				</div>
+
+				<div class="fieldwrap fieldwrap_radio">
+					<f:form.radio property="neededFor" id="neededFor_5" value="Staatsexamensarbeit"/>
+					<label for="neededFor_5">
+						<f:translate key="tx_subforms_domain_model_buecherwunsch.neededFor.staatsexamensarbeit"/>
+					</label>
+				</div>
+				<div class="fieldwrap fieldwrap_radio">
+					<f:form.radio property="neededFor" id="neededFor_6" value="Magisterarbeit"/>
+					<label for="neededFor_6">
+						<f:translate key="tx_subforms_domain_model_buecherwunsch.neededFor.magisterarbeit"/>
+					</label>
+				</div>
+			</div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-deadline">
+					<f:translate key="tx_subforms_domain_model_buecherwunsch.deadline"/>
+				</label>
+				<f:form.textfield property="deadline" id="buecherwunsch-deadline" type="date" required="required"/>
+			</div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-tutor">
+					<f:translate key="tx_subforms_domain_model_buecherwunsch.tutor"/>
+				</label>
+				<f:form.textfield property="tutor" id="buecherwunsch-tutor" required="required"/>
+			</div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-faculty">
+					<f:translate key="tx_subforms_domain_model_buecherwunsch.faculty"/>
+				</label>
+				<f:form.select property="faculty" id="buecherwunsch-faculty" options="{
+				Agrarwissenschaften: 'Fakultät für Agrarwissenschaften',
+				Biologische: 'Biologische Fakultät inkl. Psychologie'
+				Chemie: 'Fakultät für Chemie',
+				Forstwissenschaften: 'Fakultät für Forstwissenschaften und Waldökologie',
+				Geowissenschaften: 'Fakultät für Geowissenschaften und Geographie',
+				Mathematik: 'Fakultät für Mathematik und Informatik',
+				Physik: 'Fakultät für Physik',
+				Juristische: 'Juristische Fakultät',
+				Sozialwissenschaftliche: 'Sozialwissenschaftliche Fakultät',
+				Wirtschaftswissenschaftliche: 'Wirtschaftswissenschaftliche Fakultät',
+				Philosophie: 'Philosophische Fakultät',
+				Theologische: 'Theologische Fakultät',
+				Universitaetsmedizin: 'Universitätsmedizin'
+				}"/>
+			</div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-instituteName">
+					<f:translate key="tx_subforms_domain_model_buecherwunsch.instituteName"/>
+				</label>
+				<f:form.textfield property="instituteName" id="buecherwunsch-instituteName" required="required"/>
+			</div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-remarks">
+					<f:translate key="tx_subforms_domain_model_buecherwunsch.remarks"/>
+				</label>
+				<f:form.textarea property="remarks" rows="5" id="buecherwunsch-remarks" cols="40"/>
+			</div>
+		</fieldset>
+
+		<f:form.submit value="{f:translate(key:'tx_subforms.submit')}"/>
+
+	</f:form>
+</f:section>

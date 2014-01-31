@@ -1,0 +1,12 @@
+Betrifft Seite {values.pageId}
+<f:uri.page pageUid="{values.pageId}" absolute="TRUE" />
+
+Text: {values.message}
+
+<f:if condition="{values.emailAddress}">
+	<f:then>
+E-Mail Adresse: {values.emailAddress}
+	</f:then>
+</f:if>
+
+Gesendet via www.sub.uni-goettingen.de <f:format.date format="d.m.Y - H:i:s">now</f:format.date>

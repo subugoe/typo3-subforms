@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Sprachlabels for Subforms</description>
+	</meta>
+	<data type="array">
+		<languageKey index="de" type="array">
+			<label index="tx_subforms_domain_model_buecherwunsch.crdate">Erstellt</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.formTitle">Bücherwunsch</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.title">Titel</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.author">Autor/in / Herausgeber/in</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.editor">Erscheinungsort / Verlag</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.publishingYear">Erscheinungsjahr</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.issue">Auflage</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.isbn">ISBN</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.additionalData">Weitere Angaben</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.name">Name, Vorname</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.userId">Benutzernummer</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.emailAddress">E-Mail</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.neededFor">Ich benötige den Titel für meine</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.deadline">Abgabetermin der Arbeit</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.tutor">Name der Betreuerin / des Betreuers der Arbeit</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.faculty">Name der Fakultät</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.instituteName">Name des Instituts / Seminars</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.remarks">Bemerkungen</label>
+
+			<label index="tx_subforms_domain_model_feedback.emailAddress">E-Mail Adresse</label>
+			<label index="tx_subforms_domain_model_feedback.message">Nachricht</label>
+			<label index="tx_subforms_domain_model_feedback.pageId">Seite</label>
+			<label index="tx_subforms_domain_model_feedback.formTitle">Feedback</label>
+
+		</languageKey>
+		<languageKey index="en" type="array">
+			<label index="tx_subforms_domain_model_buecherwunsch.crdate">Erstellt</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.formTitle">Bücherwunsch</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.title">Titel</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.author">Autor/in / Herausgeber/in</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.editor">Erscheinungsort / Verlag</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.publishingYear">Erscheinungsjahr</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.issue">Auflage</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.isbn">ISBN</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.additionalData">Weitere Angaben</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.name">Name, Vorname</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.userId">Benutzernummer</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.emailAddress">E-Mail</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.neededFor">Ich benötige den Titel für meine</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.deadline">Abgabetermin der Arbeit</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.tutor">Name der Betreuerin / des Betreuers der Arbeit</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.faculty">Name der Fakultät</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.instituteName">Name des Instituts / Seminars</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.remarks">Bemerkungen</label>
+
+			<label index="tx_subforms_domain_model_feedback.emailAddress">E-Mail Adresse</label>
+			<label index="tx_subforms_domain_model_feedback.message">Nachricht</label>
+			<label index="tx_subforms_domain_model_feedback.pageId">Seite</label>
+			<label index="tx_subforms_domain_model_feedback.formTitle">Feedback</label>
+
+		</languageKey>
+	</data>
+</T3locallang>

@@ -1,0 +1,38 @@
+2012-07-10 Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
+	* Created abstract class to be extended by each form
+
+2012-04-25 Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
+	* Float des Submit Buttons entfernt und Abstand nach unten erhoeht (WWW-1199)
+
+2012-04-18 Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
+	* Anpassung Feedbackformular (WWW-1118)
+
+2012-02-10 Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
+	* Kleine Anpassungen im E-Mailtemplate (Zusammenrueckungen)
+
+2012-02-08 Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
+	* Buecherwunsch mit E-Mail an den Absender
+	* Feedback Formular angepasst (WWW-1118)
+	* Counter fuer das Buecherwunschformular mit Initialwert
+	* Anker fuer den Buecherwunsch hinzugefuegt
+
+2012-02-07 Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
+	* Added Security when parsing ISBN
+	* Local Storage fuer bereits abgefragte ISBN
+	* Test Stub angelegt
+	* Default Wert fuer die Radiobuttons des Buecherwunschformulars
+	* Cleanups
+	* Integration Feedbackformular
+	* Documentation Stub
+
+2012-02-06 Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
+	* E-Mail Versand via Fluid Template
+	* Lokalisierung
+	* Persistence integriert
+	* Anzeige des Erstellungsdatums
+	* CSS Tuning
+	* Counter
+	* ISBN Validierung
+
+2012-02-03 Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
+	* Initial Import
