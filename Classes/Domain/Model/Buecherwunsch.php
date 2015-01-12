@@ -1,4 +1,5 @@
 <?php
+namespace Subugoe\Subforms\Domain\Model;
 
 /* * *************************************************************
  *  Copyright notice
@@ -26,12 +27,9 @@
  * ************************************************************* */
 
 /**
- * Description
- *
- * @author Ingo Pfennigstorf <pfennigstorf@sub-goettingen.de>, Goettingen State Library
- * Date: 03.02.12
+ * Buecherwunsch
  */
-class Tx_Subforms_Domain_Model_Buecherwunsch extends Tx_Subforms_Domain_Model_Form {
+class Buecherwunsch extends Form {
 
 	/**
 	 *

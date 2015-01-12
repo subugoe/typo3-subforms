@@ -1,4 +1,5 @@
 <?php
+namespace Subugoe\Subforms\Domain\Model;
 
 /* * *************************************************************
  *  Copyright notice
@@ -27,11 +28,8 @@
 
 /**
  * Feedback Model
- *
- * @author Ingo Pfennigstorf <pfennigstorf@sub-goettingen.de>, Goettingen State Library
- * $Id: Feedback.php 1962 2012-10-16 12:06:08Z pfennigstorf $
  */
-class Tx_Subforms_Domain_Model_Feedback extends Tx_Subforms_Domain_Model_Form {
+class Feedback extends Form {
 
 	/**
 	 * @validate NotEmpty

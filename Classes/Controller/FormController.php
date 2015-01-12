@@ -1,11 +1,11 @@
 <?php
-
+namespace Subugoe\Subforms\Controller;
 /* * *************************************************************
  *  Copyright notice
  *
  *  (c) 2012 Ingo Pfennigstorf <pfennigstorf@sub-goettingen.de>
  *      Goettingen State Library
- *  
+ *
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -24,13 +24,13 @@
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  * ************************************************************* */
+use TYPO3\CMS\Core\Messaging\FlashMessage;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
- * Description
- * $Id: FormController.php 2049 2012-12-18 07:53:23Z pfennigstorf $
- * @author Ingo Pfennigstorf <pfennigstorf@sub-goettingen.de>, Goettingen State Library
+ * Main conrtroller for subforms extension
  */
-class Tx_Subforms_Controller_FormController extends Tx_Extbase_MVC_Controller_ActionController {
+class FormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	const extKey = 'subforms';
 
@@ -73,16 +73,16 @@ class Tx_Subforms_Controller_FormController extends Tx_Extbase_MVC_Controller_Ac
 
 		$controller = $this->request->getControllerObjectName();
 
-			// get the controller name for use as part of the  template path
+		// get the controller name for use as part of the  template path
 		$this->controllerName = $this->request->getControllerName();
 		$action = $this->request->getControllerActionName();
 
-			// get model for the form
+		// get model for the form
 		$methodParams = $this->reflectionService->getMethodTagsValues($controller, $action . 'Action');
 		$model = explode(' ', $methodParams['param'][0]);
 		$this->modelName = $model[0];
 
-			// create repository
+		// create repository
 		$this->repositoryName = str_replace('Model', 'Repository', $this->modelName) . 'Repository';
 
 	}
@@ -97,19 +97,19 @@ class Tx_Subforms_Controller_FormController extends Tx_Extbase_MVC_Controller_Ac
 	/**
 	 * Adds data to the repository, triggers mail sending and gives a feedback to the front end user
 	 *
-	 * @param $values An object to insert into the repository
-	 * @dontvalidate
+	 * @param void
+	 * @ignorevalidation
 	 */
 	public function createAction($values) {
 
 		$lowerCaseModel = strtolower($this->modelName);
 
-				// add to repository
+		// add to repository
 		if (self::sendEmail($values)) {
-			$this->flashMessageContainer->add(Tx_Extbase_Utility_Localization::translate($lowerCaseModel . '.thankYou', self::extKey, t3lib_FlashMessage::OK));
-			$this->flashMessageContainer->add(Tx_Extbase_Utility_Localization::translate($lowerCaseModel . '.thankYouText', self::extKey, t3lib_FlashMessage::OK));
+			$this->addFlashMessage(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate($lowerCaseModel . '.thankYou', self::extKey, FlashMessage::OK));
+			$this->addFlashMessage(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate($lowerCaseModel . '.thankYouText', self::extKey, FlashMessage::OK));
 		} else {
-			$this->flashMessageContainer->add(Tx_Extbase_Utility_Localization::translate('tx_subforms.error', self::extKey, t3lib_FlashMessage::ERROR));
+			$this->addFlashMessage(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_subforms.error', self::extKey, FlashMessage::ERROR));
 		}
 
 		$this->redirect('index');
@@ -121,24 +121,26 @@ class Tx_Subforms_Controller_FormController extends Tx_Extbase_MVC_Controller_Ac
 	 */
 	protected function sendEmail($values) {
 
-			// E-Mail to recipient (internal)
-		$emailView = $this->objectManager->create('Tx_Fluid_View_StandaloneView');
+		// E-Mail to recipient (internal)
+		/** @var \TYPO3\CMS\Fluid\View\StandaloneView $emailView */
+		$emailView = $this->objectManager->get('TYPO3\\CMS\\Fluid\\View\\StandaloneView');
 		$emailView->setFormat('text');
-		$extbaseFrameworkConfiguration = $this->configurationManager->getConfiguration(Tx_Extbase_Configuration_ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK);
-		$templateRootPath = t3lib_div::getFileAbsFileName($extbaseFrameworkConfiguration['settings']['view']['templateRootPath']);
+		$extbaseFrameworkConfiguration = $this->configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK);
+		$templateRootPath = GeneralUtility::getFileAbsFileName($extbaseFrameworkConfiguration['settings']['view']['templateRootPath']);
 		$templatePathAndFilename = $templateRootPath . $this->controllerName . '/Email.html';
 		$emailView->setTemplatePathAndFilename($templatePathAndFilename);
 
-			// add variables to template
+		// add variables to template
 		$emailView->assign('values', $values);
 
 		$emailBody = $emailView->render();
-		$message = t3lib_div::makeInstance('t3lib_mail_Message');
+		/** @var \TYPO3\CMS\Core\Mail\MailMessage $message */
+		$message = GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Mail\\MailMessage');
 		$message->setTo($this->receiver)
 				->setFrom($this->sender)
 				->setSubject($this->subject);
 
-			// Plain text example
+		// Plain text example
 		$message->setBody($emailBody, 'text/plain');
 
 		$message->send();

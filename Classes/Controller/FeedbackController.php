@@ -1,5 +1,5 @@
 <?php
-
+namespace Subugoe\Subforms\Controller;
 /* * *************************************************************
  *  Copyright notice
  *
@@ -27,25 +27,23 @@
 
 /**
  * Controller for the Feedback form used on sub.uni-goettingen.de
- * $Id: FeedbackController.php 1994 2012-12-05 14:44:42Z pfennigstorf $
- * @author Ingo Pfennigstorf <pfennigstorf@sub-goettingen.de>, Goettingen State Library
  */
-class Tx_Subforms_Controller_FeedbackController extends Tx_Subforms_Controller_FormController {
+class FeedbackController extends FormController {
 
 	/**
-	 * @var Tx_Subforms_Domain_Model_Feedback
+	 * @var \Subugoe\Subforms\Domain\Model\Feedback
 	 * @inject
 	 */
 	protected $feedbackModel;
 
 	/**
-	 * @var Tx_Subforms_Domain_Repository_FeedbackRepository
+	 * @var \Subugoe\Subforms\Domain\Repository\FeedbackRepository
 	 * @inject
 	 */
 	protected $feedbackRepository;
 
 	/**
-	 * @var Tx_Subforms_Domain_Repository_PageRepository
+	 * @var \Subugoe\Subforms\Domain\Repository\PageRepository
 	 * @inject
 	 */
 	protected $pageRepository;
@@ -63,10 +61,10 @@ class Tx_Subforms_Controller_FeedbackController extends Tx_Subforms_Controller_F
 	/**
 	 * Displays the form
 	 *
-	 * @param Tx_Subforms_Domain_Model_Feedback $feedback
+	 * @param \Subugoe\Subforms\Domain\Model\Feedback $feedback
 	 * @dontvalidate $feedback
 	 */
-	public function indexAction(Tx_Subforms_Domain_Model_Feedback $feedback = NULL) {
+	public function indexAction(\Subugoe\Subforms\Domain\Model\Feedback $feedback = NULL) {
 		parent::indexAction();
 
 		if ($feedback === NULL) {
@@ -84,10 +82,10 @@ class Tx_Subforms_Controller_FeedbackController extends Tx_Subforms_Controller_F
 	/**
 	 * Creates the Feedback and triggers the E-Mail sending
 	 *
-	 * @param Tx_Subforms_Domain_Model_Feedback $feedback
+	 * @param \Subugoe\Subforms\Domain\Model\Feedback $feedback
 	 * @return void
 	 */
-	public function createAction(Tx_Subforms_Domain_Model_Feedback $feedback) {
+	public function createAction(\Subugoe\Subforms\Domain\Model\Feedback $feedback) {
 		parent::createAction($feedback);
 		$this->feedbackRepository->add($feedback);
 	}

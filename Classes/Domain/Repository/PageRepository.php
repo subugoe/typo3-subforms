@@ -1,4 +1,5 @@
 <?php
+namespace Subugoe\Subforms\Domain\Repository;
 
 /* * *************************************************************
  *  Copyright notice
@@ -25,11 +26,7 @@
 
 /**
  * Repository Class for Pages
- * $Id: PageRepository.php 1989 2012-12-05 11:10:23Z pfennigstorf $
- * @author Ingo Pfennigstorf <i.pfennigstorf@sub.uni-goettingen.de>
  */
-class Tx_Subforms_Domain_Repository_PageRepository extends Tx_Extbase_Persistence_Repository {
+class PageRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
 }
-
-?>

@@ -1,4 +1,5 @@
 <?php
+namespace Subugoe\Subforms\Domain\Repository;
 
 /* * *************************************************************
  *  Copyright notice
@@ -25,11 +26,7 @@
 
 /**
  * Repository Class for Buecherwunsch
- * $Id: BuecherwunschRepository.php 1634 2012-02-06 09:29:51Z pfennigstorf $
- * @author Ingo Pfennigstorf <i.pfennigstorf@sub.uni-goettingen.de>
  */
-class Tx_Subforms_Domain_Repository_BuecherwunschRepository extends Tx_Extbase_Persistence_Repository {
+class BuecherwunschRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
 }
-
-?>

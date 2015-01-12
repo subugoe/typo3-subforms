@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Sprachlabels for Subforms</description>
+	</meta>
+	<data type="array">
+		<languageKey index="en" type="array">
+			<label index="tx_subforms_domain_model_buecherwunsch.legend">Ich studiere an der Georg-August-Universität Göttingen und wünsche für meine schriftliche Haus- bzw. Abschlussarbeit den Erwerb des folgenden Buches</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.title">Titel</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.author">Autor/in / Herausgeber/in</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.editor">Erscheinungsort / Verlag</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.publishingYear">Erscheinungsjahr</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.issue">Auflage</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.isbn">ISBN</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.additionalData">Weitere Angaben</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.name">Name, Vorname</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.userId">Benutzernummer</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.emailAddress">E-Mail</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.neededFor">Ich studiere an der Georg-August-Universität Göttingen und benötige den Titel für meine </label>
+			<label index="tx_subforms_domain_model_buecherwunsch.neededFor.hausarbeit">Hausarbeit</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.neededFor.bachelorarbeit">Bachelorarbeit</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.neededFor.masterarbeit">Masterarbeit</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.neededFor.diplomarbeit">Diplomarbeit</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.neededFor.staatsexamensarbeit">Staatsexamensarbeit</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.neededFor.magisterarbeit">Magisterarbeit</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.deadline">Abgabetermin der Arbeit</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.tutor">Name der Betreuerin / des Betreuers der Arbeit</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.faculty">Name der Fakultät</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.instituteName">Name des Instituts / Seminars</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.remarks">Bemerkungen</label>
+			<label index="tx_subforms_domain_model_feedback.message">Your opinion</label>
+			<label index="tx_subforms_domain_model_feedback.forPage">for page</label>
+			<label index="tx_subforms_domain_model_feedback.emailAddress">Your email address (optional, if you would like us to reply)</label>
+			<label index="tx_subforms_domain_model_feedback.thankYou">Thank you for your feedback.</label>
+			<label index="tx_subforms_domain_model_feedback.thankYouText">If you have given us your email address, we will reply to acknowledge your feedback as soon as possible.</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.thankYou">Thank you.</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.thankYouText">The form was submitted successfully.</label>
+			<label index="tx_subforms.error">An error occured.</label>
+			<label index="tx_subforms.submit">Submit</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tx_subforms_domain_model_buecherwunsch.legend">Ich studiere an der Georg-August-Universität Göttingen und wünsche für meine schriftliche Haus- bzw. Abschlussarbeit den Erwerb des folgenden Buches</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.title">Titel</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.author">Autor/in / Herausgeber/in</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.editor">Erscheinungsort / Verlag</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.publishingYear">Erscheinungsjahr</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.issue">Auflage</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.isbn">ISBN</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.additionalData">Weitere Angaben</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.name">Name, Vorname</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.userId">Benutzernummer</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.emailAddress">E-Mail</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.neededFor">Ich studiere an der Georg-August-Universität
+				Göttingen und benötige den Titel für meine
+			</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.neededFor.hausarbeit">Hausarbeit</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.neededFor.bachelorarbeit">Bachelorarbeit</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.neededFor.masterarbeit">Masterarbeit</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.neededFor.diplomarbeit">Diplomarbeit</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.neededFor.staatsexamensarbeit">Staatsexamensarbeit</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.neededFor.magisterarbeit">Magisterarbeit</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.deadline">Abgabetermin der Arbeit</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.tutor">Name der Betreuerin / des Betreuers der Arbeit</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.faculty">Name der Fakultät</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.instituteName">Name des Instituts / Seminars</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.remarks">Bemerkungen</label>
+			<label index="tx_subforms_domain_model_feedback.message">Ihre Rückmeldung</label>
+			<label index="tx_subforms_domain_model_feedback.forPage">zur Seite</label>
+			<label index="tx_subforms_domain_model_feedback.emailAddress">Ihre E-Mail-Adresse (optional, falls Rückmeldung erwünscht)</label>
+			<label index="tx_subforms_domain_model_feedback.thankYou">Vielen Dank für Ihr Feedback!</label>
+			<label index="tx_subforms_domain_model_feedback.thankYouText">Wenn Sie uns Ihre E-Mail-Adresse angegeben haben, werden wir uns so schnell wie möglich mit Ihnen in Verbindung setzen.</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.thankYou">Vielen Dank.</label>
+			<label index="tx_subforms_domain_model_buecherwunsch.thankYouText">Ihr Bücherwunsch wurde erfolgreich übermittelt.</label>
+
+			<label index="tx_subforms.error">Beim Versenden des Formulars trat ein Fehler auf.</label>
+			<label index="tx_subforms.submit">Absenden</label>
+		</languageKey>
+
+	</data>
+</T3locallang>

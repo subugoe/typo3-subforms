@@ -17,18 +17,20 @@ plugin.tx_subforms {
 				fromMail = {$plugin.tx_subforms.mail.feedback.fromMail}
 			}
 		}
-		persistence{
-			enableAutomaticCacheClearing = 1
-			storagePid = {$plugin.tx_subforms.persistence.storagePid}
+	}
+	persistence {
+		enableAutomaticCacheClearing = 1
+		storagePid = {$plugin.tx_subforms.persistence.storagePid}
+		classes {
+			Subugoe\Subforms\Domain\Model\Page {
+				mapping {
+					tableName = pages
+					recordType = Subugoe\Subforms\Domain\Model\Page
+					columns {
+						title.mapOnProperty = title
+					}
+				}
+			}
 		}
 	}
-		persistence {
-    		classes {
-    			Tx_Subforms_Domain_Model_Page {
-    				mapping {
-    					tableName = pages
-    				}
-    			}
-    		}
-    	}
 }

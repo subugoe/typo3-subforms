@@ -1,11 +1,11 @@
 <?php
-
+namespace Subugoe\Subforms\Controller;
 /* * *************************************************************
  *  Copyright notice
  *
  *  (c) 2012 Ingo Pfennigstorf <pfennigstorf@sub-goettingen.de>
  *      Goettingen State Library
- *  
+ *
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -27,13 +27,11 @@
 
 /**
  * Controller for the Frag die Sub form used on sub.uni-goettingen.de
- * $Id: FragDieSubController.php 1962 2012-10-16 12:06:08Z pfennigstorf $
- * @author Ingo Pfennigstorf <pfennigstorf@sub-goettingen.de>, Goettingen State Library
  */
-class Tx_Subforms_Controller_FragDieSubController extends Tx_Extbase_MVC_Controller_ActionController {
+class FragDieSubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	/**
-	 * @var Tx_Subforms_Domain_Model_FragDieSub
+	 * @var \Subugoe\Subforms\Domain\Model\FragDieSub
 	 */
 	protected $feedbackmodel;
 
@@ -43,9 +41,9 @@ class Tx_Subforms_Controller_FragDieSubController extends Tx_Extbase_MVC_Control
 	protected $feedbackRepository;
 
 	/**
-	 * @param Tx_Subforms_Domain_Model_FragDieSub $feedbackmodel
+	 * @param \Subugoe\Subforms\Domain\Model\FragDieSub $feedbackmodel
 	 */
-	public function injectFeedbackModel(Tx_Subforms_Domain_Model_FragDieSub $feedbackmodel) {
+	public function injectFeedbackModel(\Subugoe\Subforms\Domain\Model\FragDieSub $feedbackmodel) {
 		$this->feedbackmodel = $feedbackmodel;
 	}
 
@@ -59,10 +57,10 @@ class Tx_Subforms_Controller_FragDieSubController extends Tx_Extbase_MVC_Control
 	/**
 	 * Displays the form
 	 *
-	 * @param Tx_Subforms_Domain_Model_FragDieSub $feedback
+	 * @param \Subugoe\Subforms\Domain\Model\FragDieSub $feedback
 	 * @dontvalidate $feedback
 	 */
-	public function indexAction(Tx_Subforms_Domain_Model_FragDieSub $feedback = NULL) {
+	public function indexAction(\Subugoe\Subforms\Domain\Model\FragDieSub $feedback = NULL) {
 		if ($feedback === NULL) {
 			$feedback = $this->feedbackmodel;
 		}
@@ -76,16 +74,16 @@ class Tx_Subforms_Controller_FragDieSubController extends Tx_Extbase_MVC_Control
 	/**
 	 * Creates the Feedback and triggers the E-Mail sending
 	 *
-	 * @param Tx_Subforms_Domain_Model_FragDieSub $feedback
+	 * @param \Subugoe\Subforms\Domain\Model\FragDieSub $feedback
 	 */
-	public function createAction(Tx_Subforms_Domain_Model_FragDieSub $feedback) {
+	public function createAction(\Subugoe\Subforms\Domain\Model\FragDieSub $feedback) {
 		if ($this->sendEmail($feedback)) {
 			// Dem Repository hinzufuegen
 			$this->feedbackRepository->add($feedback);
-			$this->flashMessageContainer->add(Tx_Extbase_Utility_Localization::translate('tx_subforms_domain_model_feedback.thankYou', 'subforms'));
-			$this->flashMessageContainer->add(Tx_Extbase_Utility_Localization::translate('tx_subforms_domain_model_feedback.thankYouText', 'subforms'));
+			$this->addFlashMessage(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_subforms_domain_model_feedback.thankYou', 'subforms'));
+			$this->addFlashMessage(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_subforms_domain_model_feedback.thankYouText', 'subforms'));
 		} else {
-			$this->flashMessageContainer->add(Tx_Extbase_Utility_Localization::translate('tx_subforms_domain_model_feedback.tx_subforms.error', 'subforms'));
+			$this->addFlashMessage(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_subforms_domain_model_feedback.tx_subforms.error', 'subforms'));
 		}
 		$this->redirect('index');
 

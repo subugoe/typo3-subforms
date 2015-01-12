@@ -1,5 +1,5 @@
 <?php
-
+namespace Subugoe\Subforms\Domain\Validator;
 /* * *************************************************************
  *  Copyright notice
  *
@@ -27,11 +27,8 @@
 
 /**
  * Validator to determine if a string is either empty or contains a valid E-Mail address
- *
- * @author Ingo Pfennigstorf <pfennigstorf@sub-goettingen.de>, Goettingen State Library
- * $Id$
  */
-class Tx_Subforms_Domain_Validator_EmptyOrEmailValidator extends Tx_Extbase_Validation_Validator_AbstractValidator {
+class EmptyOrEmailValidator extends \TYPO3\CMS\Extbase\Validation\Validator\AbstractValidator {
 
 	/**
 	 * Validates an incoming string that either has to contain a valid E-Mail address or to be empty
