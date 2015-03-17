@@ -27,6 +27,7 @@ namespace Subugoe\Subforms\Controller;
 use TYPO3\CMS\Core\Messaging\FlashMessage;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
 /**
  * Main conrtroller for subforms extension
@@ -85,7 +86,10 @@ class FormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		// get model for the form
 		$methodParams = $this->reflectionService->getMethodTagsValues($controller, $action . 'Action');
 		$model = explode(' ', $methodParams['param'][0]);
-		$this->modelName = $model[0];
+
+		$modelParts = explode('\\', $model[0]);
+
+		$this->modelName = $modelParts[5];
 
 		// create repository
 		$this->repositoryName = str_replace('Model', 'Repository', $this->modelName) . 'Repository';
@@ -107,14 +111,14 @@ class FormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 */
 	public function createAction($values) {
 
-		$lowerCaseModel = strtolower($this->modelName);
+		$lowerCaseModel = 'tx_subforms_domain_model_' . strtolower($this->modelName);
 
 		// add to repository
 		if (self::sendEmail($values)) {
-			$this->addFlashMessage(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate($lowerCaseModel . '.thankYou', self::extKey, FlashMessage::OK));
-			$this->addFlashMessage(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate($lowerCaseModel . '.thankYouText', self::extKey, FlashMessage::OK));
+			$this->addFlashMessage(LocalizationUtility::translate($lowerCaseModel . '.thankYou', self::extKey), '', FlashMessage::OK);
+			$this->addFlashMessage(LocalizationUtility::translate($lowerCaseModel . '.thankYouText', self::extKey), '', FlashMessage::OK);
 		} else {
-			$this->addFlashMessage(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_subforms.error', self::extKey, FlashMessage::ERROR));
+			$this->addFlashMessage(LocalizationUtility::translate('tx_subforms.error', self::extKey, '', FlashMessage::ERROR));
 		}
 
 		$this->redirect('index');
