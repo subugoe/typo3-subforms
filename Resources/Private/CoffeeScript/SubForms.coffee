@@ -2,12 +2,9 @@ $(document).ready ->
 	if Modernizr.inputtypes.date is false
 		$("#buecherwunsch-deadline").datepicker $.datepicker.regional.de
 
-	# provide required fields with an asterisk
-	$(".subforms input[required]").siblings("label").append "*"
-
 	# make an asynchronous call to an isbn-metadata retriever and display the results
-	$(".subforms #buecherwunsch-isbn").blur ->
-		unless $("#buecherwunsch-isbn").val() is ""
+	$(".subforms #isbn").blur ->
+		unless $("#isbn").val() is ""
 			$.getJSON "/?eID=buecherwunsch",
 				isbn: $(this).val()
 			, (data) ->
@@ -20,4 +17,4 @@ $(document).ready ->
 						ed: "issue"
 
 					for index of fieldlist
-						$(".subforms #buecherwunsch-" + fieldlist[index]).attr "value", data[index]  if $(".subforms #buecherwunsch-" + fieldlist[index]).val() is ""
+						$(".subforms #" + fieldlist[index]).attr "value", data[index]  if $(".subforms #" + fieldlist[index]).val() is ""

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Sprachlabels for Subforms</description>
+	</meta>
+	<data type="array">
+		<languageKey index="en" type="array">
+			<label index="tx_subforms_domain_model_buecherwunsch.legend">Ich studiere an der Georg-August-Universität Göttingen und wünsche für meine schriftliche Haus- bzw. Abschlussarbeit den Erwerb des folgenden Buches</label>
+			<label index="titel">Titel</label>
+			<label index="anrede">Andrede</label>
+			<label index="tx_subforms.error">An error occured.</label>
+			<label index="submit">Submit</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tx_subforms_domain_model_buecherwunsch.legend">Ich studiere an der Georg-August-Universität Göttingen und wünsche für meine schriftliche Haus- bzw. Abschlussarbeit den Erwerb des folgenden Buches</label>
+			<label index="titel">Titel</label>
+			<label index="anrede">Anrede</label>
+			<label index="tx_subforms.error">Beim Versenden des Formulars trat ein Fehler auf.</label>
+			<label index="submit">Absenden</label>
+		</languageKey>
+
+	</data>
+</T3locallang>

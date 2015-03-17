@@ -1,11 +1,26 @@
 plugin.Tx_Formhandler.settings {
 	# debug = 1
-	templateFile = EXT:subforms/Resources/Private/Templates/Buecherwunsch/Form.html
+	templateFile = EXT:subforms/Resources/Private/Templates/Patenschaft/Form.html
 	formValuesPrefix = formhandler
 	jsFile = EXT:subforms/Resources/Public/JavaScript/SubForms.js
 	cssFile = EXT:subforms/Resources/Public/Css/SubForms.css
-	langFile = EXT:subforms/Resources/Private/Language/Buecherwunsch.xml
+	langFile = EXT:subforms/Resources/Private/Language/Patenschaft.xml
 	masterTemplateFile = EXT:subforms/Resources/Private/Templates/Master/Master.html
+	preProcessors {
+		1.class = Tx_Formhandler_PreProcessor_LoadDB
+		1.config {
+			#Fields shown in the first step of the form
+			1 {
+				#Format is: [field].mapping = [db_field]
+				patenschaft.mapping = titel
+			}
+
+			select {
+				table = tx_patenschaften_buecher
+			}
+		}
+	}
+
 	validators {
 		1 {
 			class = ValidatorDefault
@@ -14,24 +29,31 @@ plugin.Tx_Formhandler.settings {
 					email {
 						errorCheck.1 = required
 					}
+
 					userId {
 						errorCheck.1 = required
 					}
+
 					name {
 						errorCheck.1 = required
 					}
+
 					title {
 						errorCheck.1 = required
 					}
+
 					publishingYear {
 						errorCheck.1 = required
 					}
+
 					tutor {
 						errorCheck.1 = required
 					}
 				}
 			}
 		}
+	}
+
 	finishers {
 		1 {
 			class = Finisher_Mail
@@ -85,5 +107,4 @@ plugin.Tx_Formhandler.settings {
 			returns = 1
 		}
 	}
-}
 }

@@ -1,20 +1,24 @@
 <!-- ###master_input### -->
-<div class="form-group ###is_error_###fieldname######">
-	<label class="col-sm-3 control-label ###is_error_###fieldname######" for="###fieldname###">###LLL:###fieldname###### ###required_###fieldname######</label>
-	<div class="col-sm-9">
-		<input class="form-control" type="text" size="20" id="###fieldname###" name="###formValuesPrefix###[###fieldname###]" value="###value_###fieldname######"/>
-		###error_###fieldname######
-	</div>
+<div class="fieldwrap ###is_error_###fieldname######">
+	<label class="###is_error_###fieldname######" for="###fieldname###">###LLL:###fieldname###### ###required_###fieldname######</label>
+	<input type="text" size="20" id="###fieldname###" name="###formValuesPrefix###[###fieldname###]" value="###value_###fieldname######"/>
+	###error_###fieldname######
 </div>
 <!-- ###master_input### -->
 
+<!-- ###master_input_date### -->
+<div class="fieldwrap ###is_error_###fieldname######">
+	<label class="###is_error_###fieldname######" for="###fieldname###">###LLL:###fieldname###### ###required_###fieldname######</label>
+	<input type="date" size="20" id="###fieldname###" name="###formValuesPrefix###[###fieldname###]" value="###value_###fieldname######"/>
+	###error_###fieldname######
+</div>
+<!-- ###master_input_date### -->
+
 <!-- ###master_textarea### -->
-<div class="form-group ###is_error_###fieldname######">
-	<label class="col-sm-3 control-label ###is_error_###fieldname######" for="###fieldname###" ###is_error_###fieldname######>###LLL:###fieldname###### ###required_###fieldname######</label>
-	<div class="col-sm-9">
-		<textarea class="form-control ###is_error_###fieldname######" rows="10" cols="30" id="###fieldname###" name="###formValuesPrefix###[###fieldname###]">###value_###fieldname######</textarea>
+<div class="fieldwrap ###is_error_###fieldname######">
+	<label class="###is_error_###fieldname######" for="###fieldname###" ###is_error_###fieldname######>###LLL:###fieldname###### ###required_###fieldname######</label>
+		<textarea class="form-control ###is_error_###fieldname######" rows="5" cols="40 id="###fieldname###" name="###formValuesPrefix###[###fieldname###]">###value_###fieldname######</textarea>
 		###error_###fieldname######
-	</div>
 </div>
 <!-- ###master_textarea### -->
 
@@ -231,11 +235,8 @@
 <!-- ###master_spamprotection-timecheck### -->
 
 <!-- ###master_submit### -->
-<div class="form-group">
-	<div class="col-sm-1 pull-right">
-		<input type="submit" ###submit_nextStep### class="btn btn-default" value="###LLL:submit###" />
-	</div>
-</div>
+
+<input type="submit" ###submit_nextStep### value="###LLL:submit###" />
 <!-- ###master_submit### -->
 
 <!-- ###master_submit-disable### -->

@@ -1,47 +1,53 @@
-$darkgrey: #434343;
-$anotherLightGrey: #cccccc;
-$buttonBackground: '/typo3conf/ext/tmpl_sub/Resources/Public/Img/button_shade_large.png';
-$lightgrey: #dee1e7;
-$arrowLink: '/typo3conf/ext/tmpl_sub/Resources/Public/Img/arrow_right_2.png';
-$fieldWidth: 300px;
-$wideFormInput: 564px;
+$dark-grey: #434343;
+$another-light-grey: #ccc;
+$button-background: '/typo3conf/ext/tmpl_sub/Resources/Public/Img/button_shade_large.png';
+$light-grey: #dee1e7;
+$arrow-link: '/typo3conf/ext/tmpl_sub/Resources/Public/Img/arrow_right_2.png';
+$field-width: 300px;
+$wide-form-input: 564px;
 
 .subforms {
 	margin-bottom: 20px;
+	color: $dark-grey;
+
 	input:required,
 	textarea:required {
-		border: 1px solid $darkgrey;
+		border: 1px solid $dark-grey;
 	}
 
 	input:required:valid,
 	textarea:required:valid {
-		border: 1px solid $anotherLightGrey;
+		border: 1px solid $another-light-grey;
 		background: #fff;
 	}
 
 	input:focus:invalid,
 	textarea:focus:invalid {
-		border: 1px solid $darkgrey;
+		border: 1px solid $dark-grey;
 	}
-	color: $darkgrey;
+
 	fieldset {
 		border: 0 !important;
 		margin: 4px 0;
 		padding: 0 !important;
+
 		legend {
 			white-space: normal;
-			color: $darkgrey;
+			color: $dark-grey;
 			font-weight: bold;
 		}
 	}
+
 	label {
 		width: 200px;
 		clear: both;
 		float: left;
 	}
+
 	.fieldwrap {
 		margin: 10px 0;
 	}
+
 	.fieldwrap_radio {
 		label {
 			float: none;
@@ -51,67 +57,76 @@ $wideFormInput: 564px;
 			width: 435px;
 		}
 	}
+
 	input {
 		margin-left: 0;
-		border: 1px solid $anotherLightGrey;
+		border: 1px solid $another-light-grey;
 		padding: 3px;
-		width: $fieldWidth;
-		color: $darkgrey;
+		width: $field-width;
+		color: $dark-grey;
 	}
+
 	input[type=submit] {
 		width: auto;
 		border-width: 1px;
 		border-color: #d4d4d4 #b4b4b4 #b4b4b4 #d4d4d4;
 		border-radius: 3px;
-		background: url($buttonBackground) repeat-x scroll 0 100% #f3f6fb;
+		background: url($button-background) repeat-x scroll 0 100% #f3f6fb;
 		border-style: solid;
 		margin-left: 0;
 		text-align: center;
 		text-decoration: none;
-		text-shadow: 0 1px rgba(255, 255, 255, 0.75);
+		text-shadow: 0 1px rgba(255, 255, 255, .75);
 		text-transform: uppercase;
 		line-height: 100%;
 		padding: 3px 12px !important;
-		// float: left;
 		height: 28px;
-		color: $darkgrey;
+		color: $dark-grey;
 	}
+
 	input[type=radio] {
 		width: 50px;
 		margin-left: 180px;
 	}
+
 	textarea {
 		margin-left: 0;
-		border: 1px solid $anotherLightGrey;
+		border: 1px solid $another-light-grey;
 		padding: 3px;
-		width: $fieldWidth;
-		color: $darkgrey;
+		width: $field-width;
+		color: $dark-grey;
 	}
+
 	select {
 		margin-left: 0;
-		border: 1px solid $anotherLightGrey;
+		border: 1px solid $another-light-grey;
 		padding: 3px;
-		width: $fieldWidth;
-		color: $darkgrey;
+		width: $field-width;
+		color: $dark-grey;
 	}
+
 	p {
 		margin: 0;
 		padding: 0 !important;
 	}
+
 	.wideFormInput {
-		width: $wideFormInput;
-		margin: 5px 0 10px 0;
+		width: $wide-form-input;
+		margin: 5px 0 10px;
 		border-radius: 3px;
 	}
+
 	form.feedback {
 		label {
 			width: 99%;
 		}
 	}
+
 	.typo3-messages {
-		width: $wideFormInput - 14;
+		width: $wide-form-input - 14;
 		border-radius: 3px;
 	}
+
 	table.ui-datepicker-calendar tbody {
 		background-color: white;
 	}
@@ -128,14 +143,16 @@ $wideFormInput: 564px;
 		background: white;
 	}
 
-	.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+	.ui-datepicker .ui-datepicker-prev,
+	.ui-datepicker .ui-datepicker-next {
 		position: absolute;
 		top: 2px;
 		width: 1.8em;
 		height: 1.8em;
 	}
 
-	.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover {
+	.ui-datepicker .ui-datepicker-prev-hover,
+	.ui-datepicker .ui-datepicker-next-hover {
 		top: 1px;
 	}
 
@@ -155,7 +172,8 @@ $wideFormInput: 564px;
 		right: 1px;
 	}
 
-	.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+	.ui-datepicker .ui-datepicker-prev span,
+	.ui-datepicker .ui-datepicker-next span {
 		display: block;
 		position: absolute;
 		left: 50%;
@@ -213,7 +231,7 @@ $wideFormInput: 564px;
 
 	.ui-datepicker .ui-datepicker-buttonpane {
 		background-image: none;
-		margin: .7em 0 0 0;
+		margin: .7em 0 0;
 		padding: 0 .2em;
 		border-left: 0;
 		border-right: 0;
@@ -224,7 +242,7 @@ $wideFormInput: 564px;
 		float: right;
 		margin: .5em .2em .4em;
 		cursor: pointer;
-		padding: .2em .6em .3em .6em;
+		padding: .2em .6em .3em;
 		width: auto;
 		overflow: visible;
 	}
@@ -274,7 +292,7 @@ $wideFormInput: 564px;
 	.ui-datepicker-row-break {
 		clear: both;
 		width: 100%;
-		font-size: 0em;
+		font-size: 0;
 	}
 
 	/* RTL support */
@@ -339,4 +357,3 @@ $wideFormInput: 564px;
 		height: 200px; /*must have*/
 	}
 }
-

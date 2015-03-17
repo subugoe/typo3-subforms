@@ -3,3 +3,7 @@ node_modules
 
 Tests/_output/*
 /vendor/
+Build/
+!Build/phpcs.xml
+!Build/.scss-lint.yml
+!Build/phpmd.xml
