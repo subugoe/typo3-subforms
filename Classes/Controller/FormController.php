@@ -25,6 +25,7 @@ namespace Subugoe\Subforms\Controller;
  *  This copyright notice MUST APPEAR in all copies of the script!
  * ************************************************************* */
 use TYPO3\CMS\Core\Messaging\FlashMessage;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
@@ -70,6 +71,10 @@ class FormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 * @return void
 	 */
 	public function initializeAction() {
+
+		/** @var \TYPO3\CMS\Core\Page\PageRenderer $pageRenderer */
+		$pageRenderer = $GLOBALS['TSFE']->getPageRenderer();
+		$pageRenderer->addCssFile(ExtensionManagementUtility::extRelPath('subforms') . '/Resources/Public/Css/subforms.css');
 
 		$controller = $this->request->getControllerObjectName();
 
