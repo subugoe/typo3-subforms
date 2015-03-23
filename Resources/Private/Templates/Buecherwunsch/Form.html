@@ -1,164 +1,180 @@
 <!-- ###TEMPLATE_FORM1### begin -->
 <div class="subforms">
-    <form action="###REL_URL###" id="buecherwunsch" name="buecherwunsch" method="POST" class="form">
-        ###HIDDEN_FIELDS###
+	<form action="###REL_URL###" id="buecherwunsch" name="buecherwunsch" method="POST" class="form">
+		###HIDDEN_FIELDS###
 
-        <fieldset>
-            <legend>###LLL:tx_subforms_domain_model_buecherwunsch.legend###</legend>
-            <div class="fieldwrap">
-                <label for="buecherwunsch-isbn">
-                    ###LLL:tx_subforms_domain_model_buecherwunsch.isbn###
-                </label>
-                <input id="buecherwunsch-isbn" type="text" name="tx_subforms_buecherwunsch[buecherwunsch][isbn]"/>
-            </div>
-            <div class="fieldwrap">
-                <label for="buecherwunsch-title">
-                    ###LLL:tx_subforms_domain_model_buecherwunsch.title###
-                </label>
-                <input id="buecherwunsch-title" type="text" name="tx_subforms_buecherwunsch[buecherwunsch][title]" required="required"/>
+		<fieldset>
+			<legend>###LLL:tx_subforms_domain_model_buecherwunsch.legend###</legend>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-isbn">
+					###LLL:tx_subforms_domain_model_buecherwunsch.isbn###
+				</label>
+				<input id="buecherwunsch-isbn" type="text" name="tx_subforms_buecherwunsch[buecherwunsch][isbn]"/>
+			</div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-title">
+					###LLL:tx_subforms_domain_model_buecherwunsch.title###
+				</label>
+				<input id="buecherwunsch-title" type="text" name="tx_subforms_buecherwunsch[buecherwunsch][title]"
+				       required="required"/>
 
-                <div id="buecherwunsch-title-suggest" class="suggest"></div>
-            </div>
-            <div class="fieldwrap">
-                <label for="buecherwunsch-author">
-                    ###LLL:tx_subforms_domain_model_buecherwunsch.author###
-                </label>
-                <input id="buecherwunsch-author" type="text" name="tx_subforms_buecherwunsch[buecherwunsch][author]"/>
-            </div>
+				<div id="buecherwunsch-title-suggest" class="suggest"></div>
+			</div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-author">
+					###LLL:tx_subforms_domain_model_buecherwunsch.author###
+				</label>
+				<input id="buecherwunsch-author" type="text" name="tx_subforms_buecherwunsch[buecherwunsch][author]"/>
+			</div>
 
-            <div class="fieldwrap">
-                <label for="buecherwunsch-editor">
-                    ###LLL:tx_subforms_domain_model_buecherwunsch.editor###
-                </label>
-                <input id="buecherwunsch-editor" type="text" name="tx_subforms_buecherwunsch[buecherwunsch][editor]"/>
-            </div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-editor">
+					###LLL:tx_subforms_domain_model_buecherwunsch.editor###
+				</label>
+				<input id="buecherwunsch-editor" type="text" name="tx_subforms_buecherwunsch[buecherwunsch][editor]"/>
+			</div>
 
-            <div class="fieldwrap">
-                <label for="buecherwunsch-publishingYear">
-                    ###LLL:tx_subforms_domain_model_buecherwunsch.publishingYear###
-                </label>
-                <input id="buecherwunsch-publishingYear" type="text" name="tx_subforms_buecherwunsch[buecherwunsch][publishingYear]" required="required"/>
-            </div>
-            <div class="fieldwrap">
-                <label for="buecherwunsch-issue">
-                    ###LLL:tx_subforms_domain_model_buecherwunsch.issue###
-                </label>
-                <input id="buecherwunsch-issue" type="text" name="tx_subforms_buecherwunsch[buecherwunsch][issue]"/>
-            </div>
-            <div class="fieldwrap">
-                <label for="buecherwunsch-additionalData">
-                    ###LLL:tx_subforms_domain_model_buecherwunsch.additionalData###
-                </label>
-                <input id="buecherwunsch-additionalData" type="text" name="tx_subforms_buecherwunsch[buecherwunsch][additionalData]" value=""/>
-            </div>
-        </fieldset>
-        <fieldset>
-            <legend>Adresse</legend>
-            <label for="buecherwunsch-name">
-                ###LLL:tx_subforms_domain_model_buecherwunsch.name###
-            </label>
-            <input id="buecherwunsch-name" type="text" name="tx_subforms_buecherwunsch[buecherwunsch][name]" value="" required="required"/>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-publishingYear">
+					###LLL:tx_subforms_domain_model_buecherwunsch.publishingYear###
+				</label>
+				<input id="buecherwunsch-publishingYear" type="text"
+				       name="tx_subforms_buecherwunsch[buecherwunsch][publishingYear]" required="required"/>
+			</div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-issue">
+					###LLL:tx_subforms_domain_model_buecherwunsch.issue###
+				</label>
+				<input id="buecherwunsch-issue" type="text" name="tx_subforms_buecherwunsch[buecherwunsch][issue]"/>
+			</div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-additionalData">
+					###LLL:tx_subforms_domain_model_buecherwunsch.additionalData###
+				</label>
+				<input id="buecherwunsch-additionalData" type="text"
+				       name="tx_subforms_buecherwunsch[buecherwunsch][additionalData]" value=""/>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Adresse</legend>
+			<label for="buecherwunsch-name">
+				###LLL:tx_subforms_domain_model_buecherwunsch.name###
+			</label>
+			<input id="buecherwunsch-name" type="text" name="tx_subforms_buecherwunsch[buecherwunsch][name]" value=""
+			       required="required"/>
 
-            <div class="fieldwrap">
-                <label for="buecherwunsch-userId">
-                    ###LLL:tx_subforms_domain_model_buecherwunsch.userId###
-                </label>
-                <input id="buecherwunsch-userId" type="text" name="tx_subforms_buecherwunsch[buecherwunsch][userId]" value="" required="required"/>
-            </div>
-            <div class="fieldwrap">
-                <label for="buecherwunsch-emailAddress">
-                    ###LLL:tx_subforms_domain_model_buecherwunsch.emailAddress###
-                </label>
-                <input id="buecherwunsch-emailAddress" type="email" name="tx_subforms_buecherwunsch[buecherwunsch][emailAddress]" required="required"/>
-            </div>
-            <div class="fieldwrap">
-                <p>###LLL:tx_subforms_domain_model_buecherwunsch.legend###</p>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-userId">
+					###LLL:tx_subforms_domain_model_buecherwunsch.userId###
+				</label>
+				<input id="buecherwunsch-userId" type="text" name="tx_subforms_buecherwunsch[buecherwunsch][userId]"
+				       value="" required="required"/>
+			</div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-emailAddress">
+					###LLL:tx_subforms_domain_model_buecherwunsch.emailAddress###
+				</label>
+				<input id="buecherwunsch-emailAddress" type="email"
+				       name="tx_subforms_buecherwunsch[buecherwunsch][emailAddress]" required="required"/>
+			</div>
+			<div class="fieldwrap">
+				<p>###LLL:tx_subforms_domain_model_buecherwunsch.legend###</p>
 
-                <div class="fieldwrap fieldwrap_radio">
-                    <input id="neededFor_1" type="radio" name="tx_subforms_buecherwunsch[buecherwunsch][neededFor]" value="Hausarbeit" checked="checked"/>
-                    <label for="neededFor_1">###LLL:tx_subforms_domain_model_buecherwunsch.neededFor.hausarbeit###</label>
-                </div>
-                <div class="fieldwrap fieldwrap_radio">
-                    <input id="neededFor_2" type="radio" name="tx_subforms_buecherwunsch[buecherwunsch][neededFor]" value="Bachelorarbeit"/>
-                    <label for="neededFor_2">
-                        ###LLL:tx_subforms_domain_model_buecherwunsch.neededFor.bachelorarbeit###
-                    </label>
-                </div>
+				<div class="fieldwrap fieldwrap_radio">
+					<input id="neededFor_1" type="radio" name="tx_subforms_buecherwunsch[buecherwunsch][neededFor]"
+					       value="Hausarbeit" checked="checked"/>
+					<label for="neededFor_1">###LLL:tx_subforms_domain_model_buecherwunsch.neededFor.hausarbeit###</label>
+				</div>
+				<div class="fieldwrap fieldwrap_radio">
+					<input id="neededFor_2" type="radio" name="tx_subforms_buecherwunsch[buecherwunsch][neededFor]"
+					       value="Bachelorarbeit"/>
+					<label for="neededFor_2">
+						###LLL:tx_subforms_domain_model_buecherwunsch.neededFor.bachelorarbeit###
+					</label>
+				</div>
 
-                <div class="fieldwrap fieldwrap_radio">
-                    <input id="neededFor_3" type="radio" name="tx_subforms_buecherwunsch[buecherwunsch][neededFor]" value="Masterarbeit"/>
-                    <label for="neededFor_3">
-                        ###LLL:tx_subforms_domain_model_buecherwunsch.neededFor.masterarbeit###
-                    </label>
-                </div>
+				<div class="fieldwrap fieldwrap_radio">
+					<input id="neededFor_3" type="radio" name="tx_subforms_buecherwunsch[buecherwunsch][neededFor]"
+					       value="Masterarbeit"/>
+					<label for="neededFor_3">
+						###LLL:tx_subforms_domain_model_buecherwunsch.neededFor.masterarbeit###
+					</label>
+				</div>
 
-                <div class="fieldwrap fieldwrap_radio">
-                    <input id="neededFor_4" type="radio" name="tx_subforms_buecherwunsch[buecherwunsch][neededFor]" value="Diplomarbeit"/>
-                    <label for="neededFor_4">
-                        ###LLL:tx_subforms_domain_model_buecherwunsch.neededFor.diplomarbeit###
-                    </label>
-                </div>
+				<div class="fieldwrap fieldwrap_radio">
+					<input id="neededFor_4" type="radio" name="tx_subforms_buecherwunsch[buecherwunsch][neededFor]"
+					       value="Diplomarbeit"/>
+					<label for="neededFor_4">
+						###LLL:tx_subforms_domain_model_buecherwunsch.neededFor.diplomarbeit###
+					</label>
+				</div>
 
-                <div class="fieldwrap fieldwrap_radio">
-                    <input id="neededFor_5" type="radio" name="tx_subforms_buecherwunsch[buecherwunsch][neededFor]" value="Staatsexamensarbeit"/>
-                    <label for="neededFor_5">
-                        ###LLL:tx_subforms_domain_model_buecherwunsch.neededFor.staatsexamensarbeit###
-                    </label>
-                </div>
-                <div class="fieldwrap fieldwrap_radio">
-                    <input id="neededFor_6" type="radio" name="tx_subforms_buecherwunsch[buecherwunsch][neededFor]" value="Magisterarbeit"/>
-                    <label for="neededFor_6">
-                        ###LLL:tx_subforms_domain_model_buecherwunsch.neededFor.magisterarbeit###
-                    </label>
-                </div>
-            </div>
-            <div class="fieldwrap">
-                <label for="buecherwunsch-deadline">
-                    ###LLL:tx_subforms_domain_model_buecherwunsch.deadline###
-                </label>
-                <input id="buecherwunsch-deadline" type="date" name="tx_subforms_buecherwunsch[buecherwunsch][deadline]" required="required"/>
-            </div>
-            <div class="fieldwrap">
-                <label for="buecherwunsch-tutor">
-                    ###LLL:tx_subforms_domain_model_buecherwunsch.tutor###
-                </label>
-                <input id="buecherwunsch-tutor" type="text" name="tx_subforms_buecherwunsch[buecherwunsch][tutor]" required="required"/>
-            </div>
-            <div class="fieldwrap">
-                <label for="buecherwunsch-faculty">
-                    ###LLL:tx_subforms_domain_model_buecherwunsch.faculty###
-                </label>
-                <select id="buecherwunsch-faculty" name="tx_subforms_buecherwunsch[buecherwunsch][faculty]">
-                    <option value="Agrarwissenschaften">Fakultät für Agrarwissenschaften</option>
-                    <option value="Biologische">Biologische Fakultät inkl. Psychologie</option>
-                    <option value="Chemie">Fakultät für Chemie</option>
-                    <option value="Forstwissenschaften">Fakultät für Forstwissenschaften und Waldökologie</option>
-                    <option value="Geowissenschaften">Fakultät für Geowissenschaften und Geographie</option>
-                    <option value="Mathematik">Fakultät für Mathematik und Informatik</option>
-                    <option value="Physik">Fakultät für Physik</option>
-                    <option value="Juristische">Juristische Fakultät</option>
-                    <option value="Sozialwissenschaftliche">Sozialwissenschaftliche Fakultät</option>
-                    <option value="Wirtschaftswissenschaftliche">Wirtschaftswissenschaftliche Fakultät</option>
-                    <option value="Philosophie">Philosophische Fakultät</option>
-                    <option value="Theologische">Theologische Fakultät</option>
-                    <option value="Universitaetsmedizin">Universitätsmedizin</option>
-                </select>
-            </div>
-            <div class="fieldwrap">
-                <label for="buecherwunsch-instituteName">
-                    ###LLL:tx_subforms_domain_model_buecherwunsch.instituteName###
-                </label>
-                <input id="buecherwunsch-instituteName" type="text" name="tx_subforms_buecherwunsch[buecherwunsch][instituteName]" required="required"/>
-            </div>
-            <div class="fieldwrap">
-                <label for="buecherwunsch-remarks">
-                    ###LLL:tx_subforms_domain_model_buecherwunsch.remarks###
-                </label>
-                <textarea rows="5" cols="40" id="buecherwunsch-remarks" name="tx_subforms_buecherwunsch[buecherwunsch][remarks]"></textarea>
-            </div>
-        </fieldset>
-        <input type="submit" name="submit" value="###LLL:tx_subforms.submit###" ###submit_nextStep###/>
-    </form>
+				<div class="fieldwrap fieldwrap_radio">
+					<input id="neededFor_5" type="radio" name="tx_subforms_buecherwunsch[buecherwunsch][neededFor]"
+					       value="Staatsexamensarbeit"/>
+					<label for="neededFor_5">
+						###LLL:tx_subforms_domain_model_buecherwunsch.neededFor.staatsexamensarbeit###
+					</label>
+				</div>
+				<div class="fieldwrap fieldwrap_radio">
+					<input id="neededFor_6" type="radio" name="tx_subforms_buecherwunsch[buecherwunsch][neededFor]"
+					       value="Magisterarbeit"/>
+					<label for="neededFor_6">
+						###LLL:tx_subforms_domain_model_buecherwunsch.neededFor.magisterarbeit###
+					</label>
+				</div>
+			</div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-deadline">
+					###LLL:tx_subforms_domain_model_buecherwunsch.deadline###
+				</label>
+				<input id="buecherwunsch-deadline" type="date" name="tx_subforms_buecherwunsch[buecherwunsch][deadline]"
+				       required="required"/>
+			</div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-tutor">
+					###LLL:tx_subforms_domain_model_buecherwunsch.tutor###
+				</label>
+				<input id="buecherwunsch-tutor" type="text" name="tx_subforms_buecherwunsch[buecherwunsch][tutor]"
+				       required="required"/>
+			</div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-faculty">
+					###LLL:tx_subforms_domain_model_buecherwunsch.faculty###
+				</label>
+				<select id="buecherwunsch-faculty" name="tx_subforms_buecherwunsch[buecherwunsch][faculty]">
+					<option value="Agrarwissenschaften">Fakultät für Agrarwissenschaften</option>
+					<option value="Biologische">Biologische Fakultät inkl. Psychologie</option>
+					<option value="Chemie">Fakultät für Chemie</option>
+					<option value="Forstwissenschaften">Fakultät für Forstwissenschaften und Waldökologie</option>
+					<option value="Geowissenschaften">Fakultät für Geowissenschaften und Geographie</option>
+					<option value="Mathematik">Fakultät für Mathematik und Informatik</option>
+					<option value="Physik">Fakultät für Physik</option>
+					<option value="Juristische">Juristische Fakultät</option>
+					<option value="Sozialwissenschaftliche">Sozialwissenschaftliche Fakultät</option>
+					<option value="Wirtschaftswissenschaftliche">Wirtschaftswissenschaftliche Fakultät</option>
+					<option value="Philosophie">Philosophische Fakultät</option>
+					<option value="Theologische">Theologische Fakultät</option>
+					<option value="Universitaetsmedizin">Universitätsmedizin</option>
+				</select>
+			</div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-instituteName">
+					###LLL:tx_subforms_domain_model_buecherwunsch.instituteName###
+				</label>
+				<input id="buecherwunsch-instituteName" type="text"
+				       name="tx_subforms_buecherwunsch[buecherwunsch][instituteName]" required="required"/>
+			</div>
+			<div class="fieldwrap">
+				<label for="buecherwunsch-remarks">
+					###LLL:tx_subforms_domain_model_buecherwunsch.remarks###
+				</label>
+				<textarea rows="5" cols="40" id="buecherwunsch-remarks"
+				          name="tx_subforms_buecherwunsch[buecherwunsch][remarks]"></textarea>
+			</div>
+		</fieldset>
+		<input type="submit" name="submit" value="###LLL:tx_subforms.submit###" ###submit_nextStep###/>
+	</form>
 </div>
 <!-- ###TEMPLATE_FORM1### end -->
 

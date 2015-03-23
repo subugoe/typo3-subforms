@@ -64,12 +64,10 @@
 		</fieldset>
 		<fieldset>
 			<legend>Adresse</legend>
-			<div class="fieldwrap">
-				<label for="buecherwunsch-name">
-					<f:translate key="tx_subforms_domain_model_buecherwunsch.name"/>
-				</label>
-				<f:form.textfield property="name" value="" id="buecherwunsch-name" required="required"/>
-			</div>
+			<label for="buecherwunsch-name">
+				<f:translate key="tx_subforms_domain_model_buecherwunsch.name"/>
+			</label>
+			<f:form.textfield property="name" value="" id="buecherwunsch-name" required="required"/>
 			<div class="fieldwrap">
 				<label for="buecherwunsch-userId">
 					<f:translate key="tx_subforms_domain_model_buecherwunsch.userId"/>
@@ -83,15 +81,48 @@
 				<f:form.textfield property="emailAddress" type="email" id="buecherwunsch-emailAddress" required="required"/>
 			</div>
 			<div class="fieldwrap">
-				<label><f:translate key="tx_subforms_domain_model_buecherwunsch.neededFor"/></label>
-				<f:form.select property="neededFor" id="buecherwunsch-neededFor" options="{
-								Hausarbeit: 'Magisterarbeit',
-								Bachelorarbeit: 'Bachelorarbeit'
-								Masterarbeit: 'Masterarbeit',
-								Diplomarbeit: 'Diplomarbeit',
-								Staatsexamensarbeit: 'Staatsexamensarbeit',
-								Magisterarbeit: 'Magisterarbeit'
-								}"/>
+				<p>
+					<f:translate key="tx_subforms_domain_model_buecherwunsch.neededFor"/>
+				</p>
+				<div class="fieldwrap fieldwrap_radio">
+					<f:form.radio property="neededFor" id="neededFor_1" value="Hausarbeit" checked="TRUE"/>
+					<label for="neededFor_1">
+						<f:translate key="tx_subforms_domain_model_buecherwunsch.neededFor.hausarbeit"/>
+					</label>
+				</div>
+				<div class="fieldwrap fieldwrap_radio">
+					<f:form.radio property="neededFor" id="neededFor_2" value="Bachelorarbeit"/>
+					<label for="neededFor_2">
+						<f:translate key="tx_subforms_domain_model_buecherwunsch.neededFor.bachelorarbeit"/>
+					</label>
+				</div>
+
+				<div class="fieldwrap fieldwrap_radio">
+					<f:form.radio property="neededFor" id="neededFor_3" value="Masterarbeit"/>
+					<label for="neededFor_3">
+						<f:translate key="tx_subforms_domain_model_buecherwunsch.neededFor.masterarbeit"/>
+					</label>
+				</div>
+
+				<div class="fieldwrap fieldwrap_radio">
+					<f:form.radio property="neededFor" id="neededFor_4" value="Diplomarbeit"/>
+					<label for="neededFor_4">
+						<f:translate key="tx_subforms_domain_model_buecherwunsch.neededFor.diplomarbeit"/>
+					</label>
+				</div>
+
+				<div class="fieldwrap fieldwrap_radio">
+					<f:form.radio property="neededFor" id="neededFor_5" value="Staatsexamensarbeit"/>
+					<label for="neededFor_5">
+						<f:translate key="tx_subforms_domain_model_buecherwunsch.neededFor.staatsexamensarbeit"/>
+					</label>
+				</div>
+				<div class="fieldwrap fieldwrap_radio">
+					<f:form.radio property="neededFor" id="neededFor_6" value="Magisterarbeit"/>
+					<label for="neededFor_6">
+						<f:translate key="tx_subforms_domain_model_buecherwunsch.neededFor.magisterarbeit"/>
+					</label>
+				</div>
 			</div>
 			<div class="fieldwrap">
 				<label for="buecherwunsch-deadline">
