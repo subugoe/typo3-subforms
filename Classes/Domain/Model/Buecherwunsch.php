@@ -89,7 +89,7 @@ class Buecherwunsch extends Form {
 
 	/**
 	 * @validate notEmpty
-	 * @var array
+	 * @var string
 	 */
 	protected $neededFor;
 
@@ -250,14 +250,14 @@ class Buecherwunsch extends Form {
 	}
 
 	/**
-	 * @param array $neededFor
+	 * @param string $neededFor
 	 */
 	public function setNeededFor($neededFor) {
 		$this->neededFor = $neededFor;
 	}
 
 	/**
-	 * @return array
+	 * @return string
 	 */
 	public function getNeededFor() {
 		return $this->neededFor;
