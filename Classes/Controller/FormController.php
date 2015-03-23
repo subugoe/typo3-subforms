@@ -76,6 +76,7 @@ class FormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		/** @var \TYPO3\CMS\Core\Page\PageRenderer $pageRenderer */
 		$pageRenderer = $GLOBALS['TSFE']->getPageRenderer();
 		$pageRenderer->addCssFile(ExtensionManagementUtility::extRelPath('subforms') . '/Resources/Public/Css/subforms.css');
+		$pageRenderer->addJsFile(ExtensionManagementUtility::extRelPath('subforms') . '/Resources/Public/JavaScript/SubForms.js');
 
 		$controller = $this->request->getControllerObjectName();
 
