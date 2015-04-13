@@ -95,7 +95,7 @@ class BuecherwunschController extends FormController {
 
 		// E-Mail to Buecherwunsch
 		/** @var \TYPO3\CMS\Fluid\View\StandaloneView $emailView */
-		$emailView = $this->objectManager->get('TYPO3\\CMS\\Fluid\\View\\StandaloneView');
+		$emailView = $this->objectManager->get(\TYPO3\CMS\Fluid\View\StandaloneView::class);
 		$emailView->setFormat('text');
 		$extbaseFrameworkConfiguration = $this->configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK);
 		$templateRootPath = GeneralUtility::getFileAbsFileName($extbaseFrameworkConfiguration['settings']['view']['templateRootPath']);
@@ -104,7 +104,7 @@ class BuecherwunschController extends FormController {
 		$emailView->assign('buecherwunsch', $buecherwunsch);
 		$emailBody = $emailView->render();
 		/** @var \TYPO3\CMS\Core\Mail\MailMessage $message */
-		$message = GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Mail\\MailMessage');
+		$message = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Mail\MailMessage::class);
 		$message->setTo($receiver)
 				->setFrom(array('buecherwunsch@sub.uni-goettingen.de' => 'buecherwunsch@sub.uni-goettingen.de'))
 				->setSubject('Vielen Dank für Ihren Bücherwunsch');

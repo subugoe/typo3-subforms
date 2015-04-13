@@ -75,8 +75,8 @@ class FormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 
 		/** @var \TYPO3\CMS\Core\Page\PageRenderer $pageRenderer */
 		$pageRenderer = $GLOBALS['TSFE']->getPageRenderer();
-		$pageRenderer->addCssFile(ExtensionManagementUtility::extRelPath('subforms') . '/Resources/Public/Css/subforms.css');
-		$pageRenderer->addJsFile(ExtensionManagementUtility::extRelPath('subforms') . '/Resources/Public/JavaScript/SubForms.js');
+		$pageRenderer->addCssFile(ExtensionManagementUtility::siteRelPath('subforms') . 'Resources/Public/Css/subforms.css');
+		$pageRenderer->addJsFile(ExtensionManagementUtility::siteRelPath('subforms') . 'Resources/Public/JavaScript/SubForms.js');
 
 		$controller = $this->request->getControllerObjectName();
 
@@ -133,7 +133,7 @@ class FormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 
 		// E-Mail to recipient (internal)
 		/** @var \TYPO3\CMS\Fluid\View\StandaloneView $emailView */
-		$emailView = $this->objectManager->get('TYPO3\\CMS\\Fluid\\View\\StandaloneView');
+		$emailView = $this->objectManager->get(\TYPO3\CMS\Fluid\View\StandaloneView::class);
 		$emailView->setFormat('text');
 		$extbaseFrameworkConfiguration = $this->configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK);
 		$templateRootPath = GeneralUtility::getFileAbsFileName($extbaseFrameworkConfiguration['settings']['view']['templateRootPath']);
@@ -145,7 +145,7 @@ class FormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 
 		$emailBody = $emailView->render();
 		/** @var \TYPO3\CMS\Core\Mail\MailMessage $message */
-		$message = GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Mail\\MailMessage');
+		$message = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Mail\MailMessage::class);
 		$message->setTo($this->receiver)
 				->setFrom($this->sender)
 				->setSubject($this->subject);

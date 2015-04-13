@@ -88,6 +88,7 @@ class Buecherwunsch extends Form {
 	protected $emailAddress;
 
 	/**
+	 *
 	 * @validate notEmpty
 	 * @var string
 	 */
