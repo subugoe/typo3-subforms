@@ -1,4 +1,5 @@
 <?php
+namespace Subugoe\Subforms\Domain\Model;
 
 /* * *************************************************************
  *  Copyright notice
@@ -27,11 +28,8 @@
 
 /**
  * Feedback Model
- *
- * @author Ingo Pfennigstorf <pfennigstorf@sub-goettingen.de>, Goettingen State Library
- * $Id: FragDieSub.php 1989 2012-12-05 11:10:23Z pfennigstorf $
  */
-class Tx_Subforms_Domain_Model_FragDieSub extends Tx_Subforms_Domain_Model_Form {
+class FragDieSub extends Form {
 
 	/**
 	 * @validate NotEmpty, Text

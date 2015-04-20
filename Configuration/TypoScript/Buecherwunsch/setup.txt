@@ -1,0 +1,56 @@
+plugin.Tx_Formhandler.settings {
+	# debug = 1
+	templateFile = EXT:subforms/Resources/Private/Templates/Buecherwunsch/Form.html
+	formValuesPrefix = formhandler
+	jsFile = EXT:subforms/Resources/Public/JavaScript/SubForms.js
+	cssFile = EXT:subforms/Resources/Public/Css/SubForms.css
+	langFile = EXT:subforms/Resources/Private/Language/Buecherwunsch.xml
+	masterTemplateFile = EXT:subforms/Resources/Private/Templates/Master.html
+	finishers {
+		1 {
+			class = Finisher_Mail
+			config.admin {
+				to_email = TEXT
+				to_email.value = pfennigstorf@sub.uni-goettingen.de
+				subject = TEXT
+				subject.data = LLL:fileadmin/contactform/4-lang.xml:mail_subject_admin
+				templateFile = TEXT
+				templateFile.value = EXT:subforms/Resources/Private/Templates/Buecherwunsch/Mail/Admin.html
+				sender_email = i.pfennigstorf@gmail.com
+				to_email = i.pfennigstorf@gmail.com
+				subject = 1754 - Bücherwunsch
+			}
+			config.user {
+				to_email = TEXT
+				to_email.value = pfennigstorf@sub.uni-goettingen.de
+				subject = TEXT
+				subject.data = LLL:fileadmin/contactform/4-lang.xml:mail_subject_admin
+				templateFile = TEXT
+				templateFile.value = EXT:subforms/Resources/Private/Templates/Buecherwunsch/Mail/User.html
+				sender_email = i.pfennigstorf@gmail.com
+				to_email = i.pfennigstorf@gmail.com
+				subject = Vielen Dank für Ihren Bücherwunsch
+			}
+		}
+
+		2.class = Finisher_DB
+		2.config {
+			table = tx_subforms_domain_model_buecherwunsch
+			key = uid
+
+			fields {
+				author.mapping = TEXT
+				author.mapping {
+					value = {TSFE:id}
+					insertData = 1
+				}
+			}
+		}
+
+		3.class = Finisher_SubmittedOK
+		3.config {
+			returns = 1
+		}
+	}
+}
+}

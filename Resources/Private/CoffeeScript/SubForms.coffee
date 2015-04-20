@@ -8,7 +8,7 @@ $(document).ready ->
 	# make an asynchronous call to an isbn-metadata retriever and display the results
 	$(".subforms #buecherwunsch-isbn").blur ->
 		unless $("#buecherwunsch-isbn").val() is ""
-			$.getJSON "/typo3conf/ext/subforms/Resources/Public/Ajax/MetaData.php",
+			$.getJSON "/?eID=buecherwunsch",
 				isbn: $(this).val()
 			, (data) ->
 				if data isnt null

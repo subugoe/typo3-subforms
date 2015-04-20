@@ -1,4 +1,5 @@
 <?php
+namespace Subugoe\Subforms\Domain\Repository;
 
 /* * *************************************************************
  *  Copyright notice
@@ -25,11 +26,7 @@
 
 /**
  * Repository Class for Feedbacks
- * $Id: FeedbackRepository.php 1654 2012-02-07 15:13:40Z pfennigstorf $
- * @author Ingo Pfennigstorf <i.pfennigstorf@sub.uni-goettingen.de>
  */
-class Tx_Subforms_Domain_Repository_FeedbackRepository extends Tx_Extbase_Persistence_Repository {
+class FeedbackRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
 }
-
-?>

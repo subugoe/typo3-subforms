@@ -1,4 +1,5 @@
 <?php
+namespace Subugoe\Subforms\Domain\Model;
 
 /* * *************************************************************
  *  Copyright notice
@@ -26,12 +27,9 @@
  * ************************************************************* */
 
 /**
- * Description
- *
- * @author Ingo Pfennigstorf <pfennigstorf@sub-goettingen.de>, Goettingen State Library
- * Date: 03.02.12
+ * Buecherwunsch
  */
-class Tx_Subforms_Domain_Model_Buecherwunsch extends Tx_Subforms_Domain_Model_Form {
+class Buecherwunsch extends Form {
 
 	/**
 	 *
@@ -90,8 +88,9 @@ class Tx_Subforms_Domain_Model_Buecherwunsch extends Tx_Subforms_Domain_Model_Fo
 	protected $emailAddress;
 
 	/**
+	 *
 	 * @validate notEmpty
-	 * @var array
+	 * @var string
 	 */
 	protected $neededFor;
 
@@ -252,14 +251,14 @@ class Tx_Subforms_Domain_Model_Buecherwunsch extends Tx_Subforms_Domain_Model_Fo
 	}
 
 	/**
-	 * @param array $neededFor
+	 * @param string $neededFor
 	 */
 	public function setNeededFor($neededFor) {
 		$this->neededFor = $neededFor;
 	}
 
 	/**
-	 * @return array
+	 * @return string
 	 */
 	public function getNeededFor() {
 		return $this->neededFor;

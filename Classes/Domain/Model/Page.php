@@ -1,4 +1,5 @@
 <?php
+namespace Subugoe\Subforms\Domain\Model;
 
 /* * *************************************************************
  *  Copyright notice
@@ -29,7 +30,7 @@
  * Model for a page
  *
  */
-class Tx_Subforms_Domain_Model_Page extends Tx_Extbase_DomainObject_AbstractEntity {
+class Page extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
 	 * @var string

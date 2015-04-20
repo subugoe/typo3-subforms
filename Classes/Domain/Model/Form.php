@@ -1,4 +1,5 @@
 <?php
+namespace Subugoe\Subforms\Domain\Model;
 
 /* * *************************************************************
  *  Copyright notice
@@ -26,14 +27,12 @@
  * ************************************************************* */
 
 /**
- * Description
- *
- * @author Ingo Pfennigstorf <pfennigstorf@sub-goettingen.de>, Goettingen State Library
+ * Form Model
  */
-abstract class Tx_Subforms_Domain_Model_Form extends Tx_Extbase_DomainObject_AbstractEntity {
+abstract class Form extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
-	 * @validate Tx_Subforms_Domain_Validator_EmptyOrEmailValidator
+	 * @validate \Subugoe\Subforms\Domain\Validator\EmptyOrEmailValidator
 	 * @var string
 	 */
 	protected $emailAddress;
@@ -51,7 +50,5 @@ abstract class Tx_Subforms_Domain_Model_Form extends Tx_Extbase_DomainObject_Abs
 	public function getEmailAddress() {
 		return $this->emailAddress;
 	}
-
-
 
 }
