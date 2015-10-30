@@ -27,6 +27,7 @@ namespace Subugoe\Subforms\Domain\Repository;
 /**
  * Repository Class for Feedbacks
  */
-class FeedbackRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
+class FeedbackRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
+{
 
 }

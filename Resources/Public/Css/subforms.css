@@ -1,332 +1,249 @@
 .subforms {
   margin-bottom: 20px;
-  color: #434343;
-}
-.subforms input:required,
-.subforms textarea:required {
-  border: 1px solid #434343;
-}
-.subforms input:required:valid,
-.subforms textarea:required:valid {
-  border: 1px solid #cccccc;
-  background: #fff;
-}
-.subforms input:focus:invalid,
-.subforms textarea:focus:invalid {
-  border: 1px solid #434343;
-}
-.subforms fieldset {
-  border: 0 !important;
-  margin: 4px 0;
-  padding: 0 !important;
-}
-.subforms fieldset legend {
-  white-space: normal;
-  color: #434343;
-  font-weight: bold;
-}
-.subforms label {
-  width: 200px;
-  clear: both;
-  float: left;
-}
-.subforms .fieldwrap {
-  margin: 10px 0;
-}
-.subforms .fieldwrap_radio label {
-  float: none;
-  display: inline;
-  font-weight: normal;
-  margin-left: 0 !important;
-  width: 435px;
-}
-.subforms input {
-  margin-left: 0;
-  border: 1px solid #cccccc;
-  padding: 3px;
-  width: 300px;
-  color: #434343;
-}
-.subforms input[type=submit] {
-  width: auto;
-  border-width: 1px;
-  border-color: #d4d4d4 #b4b4b4 #b4b4b4 #d4d4d4;
-  border-radius: 3px;
-  background: url("/typo3conf/ext/tmpl_sub/Resources/Public/Img/button_shade_large.png") repeat-x scroll 0 100% #f3f6fb;
-  border-style: solid;
-  margin-left: 0;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.75);
-  text-transform: uppercase;
-  line-height: 100%;
-  padding: 3px 12px !important;
-  height: 28px;
-  color: #434343;
-}
-.subforms input[type=radio] {
-  width: 50px;
-  margin-left: 180px;
-}
-.subforms textarea {
-  margin-left: 0;
-  border: 1px solid #cccccc;
-  padding: 3px;
-  width: 300px;
-  color: #434343;
-}
-.subforms select {
-  margin-left: 0;
-  border: 1px solid #cccccc;
-  padding: 3px;
-  width: 300px;
-  color: #434343;
-}
-.subforms p {
-  margin: 0;
-  padding: 0 !important;
-}
-.subforms .wideFormInput {
-  width: 564px;
-  margin: 5px 0 10px 0;
-  border-radius: 3px;
-}
-.subforms form.feedback label {
-  width: 99%;
-}
-.subforms .typo3-messages {
-  width: 550px;
-  border-radius: 3px;
-}
+  color: #434343; }
+  .subforms input:required,
+  .subforms textarea:required {
+    border: 1px solid #434343; }
+  .subforms input:required:valid,
+  .subforms textarea:required:valid {
+    border: 1px solid #ccc;
+    background: #fff; }
+  .subforms input:focus:invalid,
+  .subforms textarea:focus:invalid {
+    border: 1px solid #434343; }
+  .subforms fieldset {
+    border: 0 !important;
+    margin: 4px 0;
+    padding: 0 !important; }
+    .subforms fieldset legend {
+      white-space: normal;
+      color: #434343;
+      font-weight: bold; }
+  .subforms label {
+    width: 200px;
+    clear: both;
+    float: left; }
+  .subforms .fieldwrap {
+    margin: 10px 0; }
+  .subforms .fieldwrap_radio label {
+    float: none;
+    display: inline;
+    font-weight: normal;
+    margin-left: 0 !important;
+    width: 435px; }
+  .subforms input {
+    margin-left: 0;
+    border: 1px solid #ccc;
+    padding: 3px;
+    width: 300px;
+    color: #434343; }
+  .subforms input[type=submit] {
+    width: auto;
+    border-width: 1px;
+    border-color: #d4d4d4 #b4b4b4 #b4b4b4 #d4d4d4;
+    border-radius: 3px;
+    background: url("/typo3conf/ext/tmpl_sub/Resources/Public/Img/button_shade_large.png") repeat-x scroll 0 100% #f3f6fb;
+    border-style: solid;
+    margin-left: 0;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.75);
+    text-transform: uppercase;
+    line-height: 100%;
+    padding: 3px 12px !important;
+    height: 28px;
+    color: #434343; }
+  .subforms input[type=radio] {
+    width: 50px;
+    margin-left: 180px; }
+  .subforms textarea {
+    margin-left: 0;
+    border: 1px solid #ccc;
+    padding: 3px;
+    width: 300px;
+    color: #434343; }
+  .subforms select {
+    margin-left: 0;
+    border: 1px solid #ccc;
+    padding: 3px;
+    width: 300px;
+    color: #434343; }
+  .subforms p {
+    margin: 0;
+    padding: 0 !important; }
+  .subforms .wideFormInput {
+    width: 564px;
+    margin: 5px 0 10px;
+    border-radius: 3px; }
+  .subforms form.feedback label {
+    width: 99%; }
+  .subforms .typo3-messages {
+    width: 550px;
+    border-radius: 3px; }
 
 table.ui-datepicker-calendar tbody {
-  background-color: white;
-}
+  background-color: white; }
 
 .ui-datepicker {
   width: 17em;
   padding: .2em .2em 0;
-  display: none;
-}
+  display: none; }
+  .ui-datepicker .ui-datepicker-header {
+    position: relative;
+    padding: .2em 0; }
+  .ui-datepicker .ui-datepicker-prev,
+  .ui-datepicker .ui-datepicker-next {
+    position: absolute;
+    top: 2px;
+    width: 1.8em;
+    height: 1.8em; }
+  .ui-datepicker .ui-datepicker-prev-hover,
+  .ui-datepicker .ui-datepicker-next-hover {
+    top: 1px; }
+  .ui-datepicker .ui-datepicker-prev {
+    left: 2px; }
+  .ui-datepicker .ui-datepicker-next {
+    right: 2px; }
+  .ui-datepicker .ui-datepicker-prev-hover {
+    left: 1px; }
+  .ui-datepicker .ui-datepicker-next-hover {
+    right: 1px; }
 
-.ui-datepicker .ui-datepicker-header {
-  position: relative;
-  padding: .2em 0;
-}
-
-.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
-  position: absolute;
-  top: 2px;
-  width: 1.8em;
-  height: 1.8em;
-}
-
-.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover {
-  top: 1px;
-}
-
-.ui-datepicker .ui-datepicker-prev {
-  left: 2px;
-}
-
-.ui-datepicker .ui-datepicker-next {
-  right: 2px;
-}
-
-.ui-datepicker .ui-datepicker-prev-hover {
-  left: 1px;
-}
-
-.ui-datepicker .ui-datepicker-next-hover {
-  right: 1px;
-}
-
-.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
   display: block;
   position: absolute;
   left: 50%;
   margin-left: -8px;
   top: 50%;
-  margin-top: -8px;
-}
+  margin-top: -8px; }
 
 .ui-datepicker .ui-datepicker-title {
   margin: 0 2.3em;
   line-height: 1.8em;
-  text-align: center;
-}
+  text-align: center; }
 
 .ui-datepicker .ui-datepicker-title select {
   font-size: 1em;
-  margin: 1px 0;
-}
+  margin: 1px 0; }
 
 .ui-datepicker select.ui-datepicker-month-year {
-  width: 100%;
-}
+  width: 100%; }
 
 .ui-datepicker select.ui-datepicker-month,
 .ui-datepicker select.ui-datepicker-year {
-  width: 49%;
-}
+  width: 49%; }
 
 .ui-datepicker table {
   width: 100%;
   font-size: .9em;
   border-collapse: collapse;
-  margin: 0 0 .4em;
-}
+  margin: 0 0 .4em; }
 
 .ui-datepicker th {
   padding: .7em .3em;
   text-align: center;
   font-weight: bold;
-  border: 0;
-}
+  border: 0; }
 
 .ui-datepicker td {
   border: 0;
-  padding: 1px;
-}
+  padding: 1px; }
 
 .ui-datepicker td span, .ui-datepicker td a {
   display: block;
   padding: .2em;
   text-align: right;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .ui-datepicker .ui-datepicker-buttonpane {
   background-image: none;
-  margin: .7em 0 0 0;
+  margin: .7em 0 0;
   padding: 0 .2em;
   border-left: 0;
   border-right: 0;
-  border-bottom: 0;
-}
+  border-bottom: 0; }
 
 .ui-datepicker .ui-datepicker-buttonpane button {
   float: right;
   margin: .5em .2em .4em;
   cursor: pointer;
-  padding: .2em .6em .3em .6em;
+  padding: .2em .6em .3em;
   width: auto;
-  overflow: visible;
-}
+  overflow: visible; }
 
 .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
-  float: left;
-}
+  float: left; }
 
 /* with multiple calendars */
 .ui-datepicker.ui-datepicker-multi {
-  width: auto;
-}
+  width: auto; }
 
 .ui-datepicker-multi .ui-datepicker-group {
-  float: left;
-}
+  float: left; }
 
 .ui-datepicker-multi .ui-datepicker-group table {
   width: 95%;
-  margin: 0 auto .4em;
-}
+  margin: 0 auto .4em; }
 
 .ui-datepicker-multi-2 .ui-datepicker-group {
-  width: 50%;
-}
+  width: 50%; }
 
 .ui-datepicker-multi-3 .ui-datepicker-group {
-  width: 33.3%;
-}
+  width: 33.3%; }
 
 .ui-datepicker-multi-4 .ui-datepicker-group {
-  width: 25%;
-}
+  width: 25%; }
 
 .ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header {
-  border-left-width: 0;
-}
+  border-left-width: 0; }
 
 .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
-  border-left-width: 0;
-}
+  border-left-width: 0; }
 
 .ui-datepicker-multi .ui-datepicker-buttonpane {
-  clear: left;
-}
+  clear: left; }
 
 .ui-datepicker-row-break {
   clear: both;
   width: 100%;
-  font-size: 0em;
-}
+  font-size: 0; }
 
-/* RTL support */
 .ui-datepicker-rtl {
-  direction: rtl;
-}
+  direction: rtl; }
 
 .ui-datepicker-rtl .ui-datepicker-prev {
   right: 2px;
-  left: auto;
-}
+  left: auto; }
 
 .ui-datepicker-rtl .ui-datepicker-next {
   left: 2px;
-  right: auto;
-}
+  right: auto; }
 
 .ui-datepicker-rtl .ui-datepicker-prev:hover {
   right: 1px;
-  left: auto;
-}
+  left: auto; }
 
 .ui-datepicker-rtl .ui-datepicker-next:hover {
   left: 1px;
-  right: auto;
-}
+  right: auto; }
 
 .ui-datepicker-rtl .ui-datepicker-buttonpane {
-  clear: right;
-}
+  clear: right; }
 
 .ui-datepicker-rtl .ui-datepicker-buttonpane button {
-  float: left;
-}
+  float: left; }
 
 .ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current {
-  float: right;
-}
+  float: right; }
 
 .ui-datepicker-rtl .ui-datepicker-group {
-  float: right;
-}
+  float: right; }
 
 .ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header {
   border-right-width: 0;
-  border-left-width: 1px;
-}
+  border-left-width: 1px; }
 
 .ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
   border-right-width: 0;
-  border-left-width: 1px;
-}
-
-/* IE6 IFRAME FIX (taken from datepicker 1.5.3 */
-.ui-datepicker-cover {
-  position: absolute;
-  /*must have*/
-  z-index: -1;
-  /*must have*/
-  filter: mask();
-  /*must have*/
-  top: -4px;
-  /*must have*/
-  left: -4px;
-  /*must have*/
-  width: 200px;
-  /*must have*/
-  height: 200px;
-  /*must have*/
-}
+  border-left-width: 1px; }

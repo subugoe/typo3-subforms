@@ -5,6 +5,7 @@
         "codeception/codeception": "~2.0",
         "predis/predis": "~1.0"
     },
+    "type": "typo3-cms-extension",
     "license": "GPL",
     "authors": [
         {
@@ -12,5 +13,4 @@
             "email": "i.pfennigstorf@gmail.com"
         }
     ],
-    "require": {}
 }

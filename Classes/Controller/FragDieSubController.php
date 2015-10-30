@@ -1,5 +1,6 @@
 <?php
 namespace Subugoe\Subforms\Controller;
+
 /* * *************************************************************
  *  Copyright notice
  *
@@ -28,65 +29,73 @@ namespace Subugoe\Subforms\Controller;
 /**
  * Controller for the Frag die Sub form used on sub.uni-goettingen.de
  */
-class FragDieSubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class FragDieSubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+{
 
-	/**
-	 * @var \Subugoe\Subforms\Domain\Model\FragDieSub
-	 */
-	protected $feedbackmodel;
+    /**
+     * @var \Subugoe\Subforms\Domain\Model\FragDieSub
+     */
+    protected $feedbackmodel;
 
-	/**
-	 * @var Tx_Subforms_Domain_Repository_FeedbackRepository
-	 */
-	protected $feedbackRepository;
+    /**
+     * @var Tx_Subforms_Domain_Repository_FeedbackRepository
+     */
+    protected $feedbackRepository;
 
-	/**
-	 * @param \Subugoe\Subforms\Domain\Model\FragDieSub $feedbackmodel
-	 */
-	public function injectFeedbackModel(\Subugoe\Subforms\Domain\Model\FragDieSub $feedbackmodel) {
-		$this->feedbackmodel = $feedbackmodel;
-	}
+    /**
+     * @param \Subugoe\Subforms\Domain\Model\FragDieSub $feedbackmodel
+     */
+    public function injectFeedbackModel(\Subugoe\Subforms\Domain\Model\FragDieSub $feedbackmodel)
+    {
+        $this->feedbackmodel = $feedbackmodel;
+    }
 
-	/**
-	 * @param Tx_Subforms_Domain_Repository_FeedbackRepository $feedbackRepository
-	 */
-	public function injectFeedbackRepository(Tx_Subforms_Domain_Repository_FeedbackRepository $feedbackRepository) {
-		$this->feedbackRepository = $feedbackRepository;
-	}
+    /**
+     * @param Tx_Subforms_Domain_Repository_FeedbackRepository $feedbackRepository
+     */
+    public function injectFeedbackRepository(Tx_Subforms_Domain_Repository_FeedbackRepository $feedbackRepository)
+    {
+        $this->feedbackRepository = $feedbackRepository;
+    }
 
-	/**
-	 * Displays the form
-	 *
-	 * @param \Subugoe\Subforms\Domain\Model\FragDieSub $feedback
-	 * @dontvalidate $feedback
-	 */
-	public function indexAction(\Subugoe\Subforms\Domain\Model\FragDieSub $feedback = NULL) {
-		if ($feedback === NULL) {
-			$feedback = $this->feedbackmodel;
-		}
+    /**
+     * Displays the form
+     *
+     * @param \Subugoe\Subforms\Domain\Model\FragDieSub $feedback
+     * @dontvalidate $feedback
+     */
+    public function indexAction(\Subugoe\Subforms\Domain\Model\FragDieSub $feedback = NULL)
+    {
+        if ($feedback === NULL) {
+            $feedback = $this->feedbackmodel;
+        }
 
-		if ($this->request->hasArgument('pageId')) {
-			$feedback->setPageId($this->request->getArgument('pageId'));
-		}
-		$this->view->assign('feedback', $feedback);
-	}
+        if ($this->request->hasArgument('pageId')) {
+            $feedback->setPageId($this->request->getArgument('pageId'));
+        }
+        $this->view->assign('feedback', $feedback);
+    }
 
-	/**
-	 * Creates the Feedback and triggers the E-Mail sending
-	 *
-	 * @param \Subugoe\Subforms\Domain\Model\FragDieSub $feedback
-	 */
-	public function createAction(\Subugoe\Subforms\Domain\Model\FragDieSub $feedback) {
-		if ($this->sendEmail($feedback)) {
-			// Dem Repository hinzufuegen
-			$this->feedbackRepository->add($feedback);
-			$this->addFlashMessage(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_subforms_domain_model_feedback.thankYou', 'subforms'));
-			$this->addFlashMessage(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_subforms_domain_model_feedback.thankYouText', 'subforms'));
-		} else {
-			$this->addFlashMessage(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_subforms_domain_model_feedback.tx_subforms.error', 'subforms'));
-		}
-		$this->redirect('index');
+    /**
+     * Creates the Feedback and triggers the E-Mail sending
+     *
+     * @param \Subugoe\Subforms\Domain\Model\FragDieSub $feedback
+     */
+    public function createAction(\Subugoe\Subforms\Domain\Model\FragDieSub $feedback)
+    {
+        if ($this->sendEmail($feedback)) {
+            // Dem Repository hinzufuegen
+            $this->feedbackRepository->add($feedback);
+            $this->addFlashMessage(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_subforms_domain_model_feedback.thankYou',
+                'subforms'));
+            $this->addFlashMessage(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_subforms_domain_model_feedback.thankYouText',
+                'subforms'));
+        } else {
+            $this->addFlashMessage(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_subforms_domain_model_feedback.tx_subforms.error',
+                'subforms'));
+        }
+        $this->redirect('index');
 
-	}
+    }
 
 }

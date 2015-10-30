@@ -29,25 +29,28 @@
  *
  * @author Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
  */
-class Tx_Subforms_Controller_FormControllerTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
-	/**
-	 * @var Tx_Subforms_Controller_FormController
-	 */
-	protected $fixture;
+class Tx_Subforms_Controller_FormControllerTest extends Tx_Extbase_Tests_Unit_BaseTestCase
+{
+    /**
+     * @var Tx_Subforms_Controller_FormController
+     */
+    protected $fixture;
 
-	/**
-	 * @return void
-	 */
-	public function setUp() {
-		$this->fixture = $this->getMock('Tx_Subforms_Controller_FormController');
-	}
+    /**
+     * @return void
+     */
+    public function setUp()
+    {
+        $this->fixture = $this->getMock('Tx_Subforms_Controller_FormController');
+    }
 
-	/**
-	 * @test
-	 */
-	public function checkIfRenamingOfModelToRepositorySucceeds() {
+    /**
+     * @test
+     */
+    public function checkIfRenamingOfModelToRepositorySucceeds()
+    {
 
-	}
+    }
 }
 
 ?>

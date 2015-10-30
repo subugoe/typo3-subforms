@@ -29,45 +29,48 @@
  *
  * @author Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
  */
-class Tx_Subforms_Controller_BuecherwunschControllerTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
-	/**
-	 * @var Tx_Subforms_Controller_BuecherwunschController
-	 */
-	protected $fixture;
+class Tx_Subforms_Controller_BuecherwunschControllerTest extends Tx_Extbase_Tests_Unit_BaseTestCase
+{
+    /**
+     * @var Tx_Subforms_Controller_BuecherwunschController
+     */
+    protected $fixture;
 
-	/**
-	 * @var Tx_Subforms_Domain_Repository_BuecherwunschRepository
-	 */
-	protected $repository;
+    /**
+     * @var Tx_Subforms_Domain_Repository_BuecherwunschRepository
+     */
+    protected $repository;
 
-	/**
-	 * @return void
-	 */
-	public function setUp() {
-		$class =  'Tx_Subforms_Controller_BuecherwunschController';
-		$this->fixture = $this->getMock($class, array('sendEmailThanks'),array(), '', FALSE);
+    /**
+     * @return void
+     */
+    public function setUp()
+    {
+        $class = 'Tx_Subforms_Controller_BuecherwunschController';
+        $this->fixture = $this->getMock($class, ['sendEmailThanks'], [], '', FALSE);
 
-		/**
-		 * @var $repository Tx_Subtabs_Domain_Repository_FaecherRepository
-		 */
-		$this->repository = $this->getMock(
-			'Tx_Subforms_Domain_Repository_BuecherwunschRepository',
-			array('findAll', 'findByUid', 'update', 'add', 'remove', 'countAll')
-		);
+        /**
+         * @var $repository Tx_Subtabs_Domain_Repository_FaecherRepository
+         */
+        $this->repository = $this->getMock(
+            'Tx_Subforms_Domain_Repository_BuecherwunschRepository',
+            ['findAll', 'findByUid', 'update', 'add', 'remove', 'countAll']
+        );
 
-	}
+    }
 
-	/**
-	 * @test
-	 */
-	public function testFachAnlage(){
+    /**
+     * @test
+     */
+    public function testFachAnlage()
+    {
 
-		print_r($this->fixture);
+        print_r($this->fixture);
 
-		$i = 1;
-		
-		$this->assertEquals(1, $i);
-	}
+        $i = 1;
+
+        $this->assertEquals(1, $i);
+    }
 
 }
 

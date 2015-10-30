@@ -29,48 +29,55 @@
  *
  * @author Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
  */
-class Tx_Subforms_Controller_BuecherwunschControllerTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
-	protected $validatorClassName = 'Tx_Subforms_Domain_Validator_EmptyOrEmailValidator';
+class Tx_Subforms_Controller_BuecherwunschControllerTest extends Tx_Extbase_Tests_Unit_BaseTestCase
+{
+    protected $validatorClassName = 'Tx_Subforms_Domain_Validator_EmptyOrEmailValidator';
 
-		/**
-		 *
-		 * @var Tx_Extbase_Validation_Validator_ValidatorInterface
-		 */
-		protected $validator;
+    /**
+     *
+     * @var Tx_Extbase_Validation_Validator_ValidatorInterface
+     */
+    protected $validator;
 
-		public function setUp() {
-			$this->validator = $this->getValidator();
-		}
+    public function setUp()
+    {
+        $this->validator = $this->getValidator();
+    }
 
-		protected function getValidator($options = array()) {
-			$validator = new $this->validatorClassName($options);
-			return $validator;
-		}
+    protected function getValidator($options = [])
+    {
+        $validator = new $this->validatorClassName($options);
+        return $validator;
+    }
 
-		protected function validatorOptions($options) {
-			$this->validator = $this->getValidator($options);
-		}
+    /**
+     * @test
+     */
+    public function emailOrEmptyValidatorDoesNotThrowAnErrorForAnEmptyString()
+    {
+        $this->assertFalse($this->validator->validate("")->hasErrors());
+    }
 
-	/**
-	 * @test
-	 */
-	public function emailOrEmptyValidatorDoesNotThrowAnErrorForAnEmptyString() {
-		$this->assertFalse($this->validator->validate("")->hasErrors());
-	}
+    /**
+     * @test
+     */
+    public function emailOrEmptyValidatorDoesNotThrowAnErrorForAValidEmailAddress()
+    {
+        $this->assertFalse($this->validator->validate('i.pfennigstorf@gmail.com')->hasErrors());
+    }
 
-	/**
-	 * @test
-	 */
-	public function emailOrEmptyValidatorDoesNotThrowAnErrorForAValidEmailAddress() {
-		$this->assertFalse($this->validator->validate('i.pfennigstorf@gmail.com')->hasErrors());
-	}
+    /**
+     * @test
+     */
+    public function emailOrEmptyValidatorThrowsAnErrorOnNonEmailAddresses()
+    {
+        $this->assertTrue($this->validator->validate('pfennigstorf')->hasErrors());
+    }
 
-	/**
-	 * @test
-	 */
-	public function emailOrEmptyValidatorThrowsAnErrorOnNonEmailAddresses() {
-		$this->assertTrue($this->validator->validate('pfennigstorf')->hasErrors());
-	}
+    protected function validatorOptions($options)
+    {
+        $this->validator = $this->getValidator($options);
+    }
 
 }
 
