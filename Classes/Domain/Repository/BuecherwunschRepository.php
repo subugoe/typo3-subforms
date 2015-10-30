@@ -27,6 +27,7 @@ namespace Subugoe\Subforms\Domain\Repository;
 /**
  * Repository Class for Buecherwunsch
  */
-class BuecherwunschRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
+class BuecherwunschRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
+{
 
 }

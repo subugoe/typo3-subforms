@@ -6,7 +6,7 @@ namespace Subugoe\Subforms\Domain\Model;
  *
  *  (c) 2012 Ingo Pfennigstorf <pfennigstorf@sub-goettingen.de>
  *      Goettingen State Library
- *  
+ *
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -29,45 +29,50 @@ namespace Subugoe\Subforms\Domain\Model;
 /**
  * Feedback Model
  */
-class Feedback extends Form {
+class Feedback extends Form
+{
 
-	/**
-	 * @validate NotEmpty
-	 * @var int
-	 */
-	protected $pageId;
+    /**
+     * @validate NotEmpty
+     * @var int
+     */
+    protected $pageId;
 
-	/**
-	 * @validate NotEmpty, Text
-	 * @var string
-	 */
-	protected $message;
+    /**
+     * @validate NotEmpty, Text
+     * @var string
+     */
+    protected $message;
 
-	/**
-	 * @param int $pageId
-	 */
-	public function setPageId($pageId) {
-		$this->pageId = $pageId;
-	}
+    /**
+     * @return int
+     */
+    public function getPageId()
+    {
+        return $this->pageId;
+    }
 
-	/**
-	 * @return int
-	 */
-	public function getPageId() {
-		return $this->pageId;
-	}
+    /**
+     * @param int $pageId
+     */
+    public function setPageId($pageId)
+    {
+        $this->pageId = $pageId;
+    }
 
-	/**
-	 * @param string $message
-	 */
-	public function setMessage($message) {
-		$this->message = $message;
-	}
+    /**
+     * @return string
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getMessage() {
-		return $this->message;
-	}
+    /**
+     * @param string $message
+     */
+    public function setMessage($message)
+    {
+        $this->message = $message;
+    }
 }

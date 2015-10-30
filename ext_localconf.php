@@ -24,44 +24,44 @@
  *  This copyright notice MUST APPEAR in all copies of the script!
  * ************************************************************* */
 if (!defined('TYPO3_MODE')) {
-	die('Access denied.');
+    die('Access denied.');
 }
 
 // Buecherwunsch Plugin
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-		'Subugoe.' . $_EXTKEY,
-		'Buecherwunsch',
-		array(
-				'Buecherwunsch' => 'index, create'
-		),
-		array(
-				'Buecherwunsch' => 'index, create'
-		)
+    'Subugoe.' . $_EXTKEY,
+    'Buecherwunsch',
+    [
+        'Buecherwunsch' => 'index, create'
+    ],
+    [
+        'Buecherwunsch' => 'index, create'
+    ]
 );
 
 // Feedback Plugin
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-		'Subugoe.' . $_EXTKEY,
-		'Feedback',
-		array(
-				'Feedback' => 'index, create',
-		),
-		array(
-				'Feedback' => 'index, create',
-		)
+    'Subugoe.' . $_EXTKEY,
+    'Feedback',
+    [
+        'Feedback' => 'index, create',
+    ],
+    [
+        'Feedback' => 'index, create',
+    ]
 );
 
 // Frag die Sub Plugin
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-		'Subugoe.' . $_EXTKEY,
-		'Fragdiesub',
-		array(
-				'FragDieSub' => 'index, create',
-		),
-		array(
-				'FragDieSub' => 'index, create',
-		)
+    'Subugoe.' . $_EXTKEY,
+    'Fragdiesub',
+    [
+        'FragDieSub' => 'index, create',
+    ],
+    [
+        'FragDieSub' => 'index, create',
+    ]
 );
 
-// statistik script ?eID=statistik
+// retrieve metadata
 $TYPO3_CONF_VARS['FE']['eID_include']['buecherwunsch'] = 'EXT:subforms/Classes/Service/MetadataService.php';

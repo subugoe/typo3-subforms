@@ -6,7 +6,7 @@ namespace Subugoe\Subforms\Domain\Model;
  *
  *  (c) 2012 Ingo Pfennigstorf <pfennigstorf@sub-goettingen.de>
  *      Goettingen State Library
- *  
+ *
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -29,26 +29,29 @@ namespace Subugoe\Subforms\Domain\Model;
 /**
  * Form Model
  */
-abstract class Form extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+abstract class Form extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+{
 
-	/**
-	 * @validate \Subugoe\Subforms\Domain\Validator\EmptyOrEmailValidator
-	 * @var string
-	 */
-	protected $emailAddress;
+    /**
+     * @validate \Subugoe\Subforms\Domain\Validator\EmptyOrEmailValidator
+     * @var string
+     */
+    protected $emailAddress;
 
-	/**
-	 * @param string $emailAddress
-	 */
-	public function setEmailAddress($emailAddress) {
-		$this->emailAddress = $emailAddress;
-	}
+    /**
+     * @return string
+     */
+    public function getEmailAddress()
+    {
+        return $this->emailAddress;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getEmailAddress() {
-		return $this->emailAddress;
-	}
+    /**
+     * @param string $emailAddress
+     */
+    public function setEmailAddress($emailAddress)
+    {
+        $this->emailAddress = $emailAddress;
+    }
 
 }

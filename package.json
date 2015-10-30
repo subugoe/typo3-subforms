@@ -1,0 +1,34 @@
+{
+  "name": "subforms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "5": "^0.0.1",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-cached": "^1.0.2",
+    "gulp-codeception": "^0.5.0",
+    "gulp-coffee": "^2.3.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^1.3.3",
+    "gulp-scss-lint": "^0.1.7"
+  },
+  "devDependencies": {
+    "gulp-sass": "^2.1.0",
+    "gulp-watch": "^4.3.5"
+  },
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subugoe/typo3-subforms.git"
+  },
+  "author": "Ingo Pfennigstorf",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/subugoe/typo3-subforms/issues"
+  },
+  "homepage": "https://github.com/subugoe/typo3-subforms#readme"
+}

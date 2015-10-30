@@ -27,6 +27,7 @@ namespace Subugoe\Subforms\Domain\Repository;
 /**
  * Repository Class for Pages
  */
-class PageRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
+class PageRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
+{
 
 }
