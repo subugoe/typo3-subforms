@@ -1,19 +1,11 @@
 <f:layout name="forms"/>
 
 <f:section name="content">
-	<f:flashMessages renderMode="div" style="background-color: #dfd; padding: 12px;"/>
-
 
 	<f:form enctype="multipart/form-data" controller="Buecherwunsch" action="create" method="post" name="buecherwunsch"
 			object="{buecherwunsch}" section="buecherwunsch">
-		<f:form.errors for="buecherwunsch">
-			<div style="background-color: #fdd; padding: 12px;">
-				<b>{error.propertyName}</b>
-				<f:for each="{error.errors}" as="fieldError">
-					<div>{fieldError.code}: {fieldError.message}</div>
-				</f:for>
-			</div>
-		</f:form.errors>
+		<f:render partial="Error" />
+
 		<fieldset>
 			<legend><f:translate key="tx_subforms_domain_model_buecherwunsch.legend" /></legend>
 			<div class="fieldwrap">

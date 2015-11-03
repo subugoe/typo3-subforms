@@ -1,0 +1,14 @@
+<f:form.validationResults for="feedback">
+	<f:if condition="{validationResults.flattenedErrors}">
+		<f:for each="{validationResults.flattenedErrors}" as="fieldError">
+			<h3>
+				<f:translate key="tx_subforms.error"/>
+			</h3>
+			<ul>
+				<f:for each="{fieldError}" as="error">
+					<li>{error.message}</li>
+				</f:for>
+			</ul>
+		</f:for>
+	</f:if>
+</f:form.validationResults>
