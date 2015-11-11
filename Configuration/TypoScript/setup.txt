@@ -17,6 +17,7 @@ plugin.tx_subforms {
 				fromMail = {$plugin.tx_subforms.mail.feedback.fromMail}
 			}
 		}
+		includeCSS = 1
 	}
 	persistence {
 		enableAutomaticCacheClearing = 1

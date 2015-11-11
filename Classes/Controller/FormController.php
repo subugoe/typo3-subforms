@@ -25,15 +25,20 @@ namespace Subugoe\Subforms\Controller;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  * ************************************************************* */
+use TYPO3\CMS\Core\Mail\MailMessage;
 use TYPO3\CMS\Core\Messaging\FlashMessage;
+use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
+use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
+use TYPO3\CMS\Fluid\View\StandaloneView;
 
 /**
  * Main conrtroller for subforms extension
  */
-class FormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+class FormController extends ActionController
 {
 
     const extKey = 'subforms';
@@ -76,10 +81,14 @@ class FormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     public function initializeAction()
     {
 
-        /** @var \TYPO3\CMS\Core\Page\PageRenderer $pageRenderer */
-        $pageRenderer = $GLOBALS['TSFE']->getPageRenderer();
-        $pageRenderer->addCssFile(ExtensionManagementUtility::siteRelPath('subforms') . 'Resources/Public/Css/subforms.css');
-        $pageRenderer->addJsFile(ExtensionManagementUtility::siteRelPath('subforms') . 'Resources/Public/JavaScript/SubForms.js');
+        if ($this->settings['includeCSS'] == 1) {
+
+            /** @var \TYPO3\CMS\Core\Page\PageRenderer $pageRenderer */
+            $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
+            $pageRenderer->addCssFile(ExtensionManagementUtility::siteRelPath('subforms') . 'Resources/Public/Css/subforms.css');
+            $pageRenderer->addJsFile(ExtensionManagementUtility::siteRelPath('subforms') . 'Resources/Public/JavaScript/SubForms.js');
+
+        }
 
         $controller = $this->request->getControllerObjectName();
 
@@ -142,9 +151,9 @@ class FormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
         // E-Mail to recipient (internal)
         /** @var \TYPO3\CMS\Fluid\View\StandaloneView $emailView */
-        $emailView = $this->objectManager->get(\TYPO3\CMS\Fluid\View\StandaloneView::class);
+        $emailView = $this->objectManager->get(StandaloneView::class);
         $emailView->setFormat('text');
-        $extbaseFrameworkConfiguration = $this->configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK);
+        $extbaseFrameworkConfiguration = $this->configurationManager->getConfiguration(ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK);
         $templateRootPath = GeneralUtility::getFileAbsFileName($extbaseFrameworkConfiguration['settings']['view']['templateRootPath']);
         $templatePathAndFilename = $templateRootPath . $this->controllerName . '/Email.html';
         $emailView->setTemplatePathAndFilename($templatePathAndFilename);
@@ -154,7 +163,7 @@ class FormController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
         $emailBody = $emailView->render();
         /** @var \TYPO3\CMS\Core\Mail\MailMessage $message */
-        $message = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Mail\MailMessage::class);
+        $message = GeneralUtility::makeInstance(MailMessage::class);
         $message->setTo($this->receiver)
             ->setFrom($this->sender)
             ->setSubject($this->subject);
