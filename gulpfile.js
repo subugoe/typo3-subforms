@@ -21,39 +21,38 @@ var config = {
 			'opera 12.1',
 			'ios 6',
 			'android 4'
-		],
-		cascade: true
+		]
 	}
 };
 
 gulp.task('sass', function() {
 	gulp.src(config.paths.sass)
 		.pipe(sass({
-					   style: 'compressed',
-					   errLogToConsole: true,
-					   sourcemaps: true
-				   }))
+			style: 'compressed',
+			errLogToConsole: true,
+			sourcemaps: true
+		}))
 		.on('error', notify.onError({
-										title: 'Sass Error',
-										message: '<%= error.message %>'
-									}))
+			title: 'Sass Error',
+			message: '<%= error.message %>'
+		}))
 		.pipe(autoprefixer(
 			config.autoprefixer
 		))
-		.pipe(gulp.dest('./Resources/Public/Css/'))
+		.pipe(gulp.dest('./Resources/Public/Css/'));
 });
 
 gulp.task('lint', function() {
 	gulp.src(config.paths.sass)
 		.pipe(cached('scsslint'))
 		.pipe(scsslint({
-						   'config': 'build/.scss-lint.yml',
-						   'maxBuffer': 9999999
-					   }))
+			'config': 'build/.scss-lint.yml',
+			'maxBuffer': 9999999
+		}));
 });
 
 gulp.task('compile', function() {
-	gulp.start('sass', ['lint'])
+	gulp.start('sass', ['lint']);
 });
 
 gulp.task('watch', function() {
@@ -61,5 +60,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', function() {
-	gulp.start('lint', 'compile', 'watch')
+	gulp.start('lint', 'compile', 'watch');
 });

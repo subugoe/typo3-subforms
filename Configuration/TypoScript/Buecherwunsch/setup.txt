@@ -2,8 +2,8 @@ plugin.Tx_Formhandler.settings {
 	# debug = 1
 	templateFile = EXT:subforms/Resources/Private/Templates/Buecherwunsch/Form.html
 	formValuesPrefix = formhandler
-	jsFile = EXT:subforms/Resources/Public/JavaScript/SubForms.js
-	cssFile = EXT:subforms/Resources/Public/Css/SubForms.css
+	jsFile = EXT:subforms/Resources/Public/JavaScript/subforms.js
+	cssFile = EXT:subforms/Resources/Public/Css/subforms.css
 	langFile = EXT:subforms/Resources/Private/Language/Buecherwunsch.xml
 	masterTemplateFile = EXT:subforms/Resources/Private/Templates/Master.html
 	finishers {
