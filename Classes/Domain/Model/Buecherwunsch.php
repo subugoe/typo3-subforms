@@ -50,7 +50,7 @@ class Buecherwunsch extends Form
     protected $editor;
 
     /**
-     * @validate NotEmpty, NumberRange(startRange=1000, endRange=2050)
+     * @validate NotEmpty, NumberRange(minimum=1000, maximum=2050)
      * @var int
      */
     protected $publishingYear;
