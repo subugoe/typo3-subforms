@@ -5,7 +5,6 @@
 // @codingStandardsIgnoreFile
 
 
-use Codeception\Module\AcceptanceHelper;
 
 /**
  * Inherited Methods

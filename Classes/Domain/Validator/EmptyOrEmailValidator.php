@@ -40,15 +40,14 @@ class EmptyOrEmailValidator extends \TYPO3\CMS\Extbase\Validation\Validator\Abst
      */
     public function isValid($email)
     {
-
         if (empty($email)) {
-            return TRUE;
+            return true;
         } else {
-            if (self::verify($email) === TRUE) {
-                return TRUE;
+            if (self::verify($email) === true) {
+                return true;
             } else {
                 $this->addError('Please enter a valid E-Mail address', 1334831981);
-                return FALSE;
+                return false;
             }
         }
     }
@@ -72,9 +71,8 @@ class EmptyOrEmailValidator extends \TYPO3\CMS\Extbase\Validation\Validator\Abst
 					)
 				$/Dix', $value)
         ) {
-            return TRUE;
+            return true;
         }
-        return FALSE;
+        return false;
     }
-
 }

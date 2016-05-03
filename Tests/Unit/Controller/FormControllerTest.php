@@ -37,7 +37,6 @@ class Tx_Subforms_Controller_FormControllerTest extends Tx_Extbase_Tests_Unit_Ba
     protected $fixture;
 
     /**
-     * @return void
      */
     public function setUp()
     {
@@ -49,8 +48,5 @@ class Tx_Subforms_Controller_FormControllerTest extends Tx_Extbase_Tests_Unit_Ba
      */
     public function checkIfRenamingOfModelToRepositorySucceeds()
     {
-
     }
 }
-
-?>

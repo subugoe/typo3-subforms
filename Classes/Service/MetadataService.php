@@ -14,7 +14,6 @@ echo getMetaDataForIsbn($isbn);
  */
 function getMetaDataForIsbn($isbn)
 {
-
     $return = '';
 
     $redis = new Predis\Client();
@@ -22,7 +21,7 @@ function getMetaDataForIsbn($isbn)
 
     $local = checkLocalStorage($isbn, $redis);
 
-    if ($local !== FALSE) {
+    if ($local !== false) {
         $data = json_encode($local);
     } else {
         $data = \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl($url);
@@ -40,7 +39,7 @@ function getMetaDataForIsbn($isbn)
             }
         }
         $return = json_encode($requiredFields);
-        if ($local === FALSE) {
+        if ($local === false) {
             writeToStorage($isbn, $return, $redis);
         }
     }
@@ -62,9 +61,8 @@ function checkLocalStorage($isbn, $redis)
     if ($redis->exists($key)) {
         return $redis->get($isbn);
     } else {
-        return FALSE;
+        return false;
     }
-
 }
 
 /**

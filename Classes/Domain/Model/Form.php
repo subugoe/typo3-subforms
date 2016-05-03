@@ -53,5 +53,4 @@ abstract class Form extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->emailAddress = $emailAddress;
     }
-
 }

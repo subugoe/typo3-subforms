@@ -76,18 +76,15 @@ class FormController extends ActionController
     /**
      * Do some magic and initiate variables used in subclasses
      *
-     * @return void
      */
     public function initializeAction()
     {
-
         if ($this->settings['includeCSS'] == 1) {
 
             /** @var \TYPO3\CMS\Core\Page\PageRenderer $pageRenderer */
             $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
             $pageRenderer->addCssFile(ExtensionManagementUtility::siteRelPath('subforms') . 'Resources/Public/Css/subforms.css');
             $pageRenderer->addJsFile(ExtensionManagementUtility::siteRelPath('subforms') . 'Resources/Public/JavaScript/SubForms.js');
-
         }
 
         $controller = $this->request->getControllerObjectName();
@@ -106,7 +103,6 @@ class FormController extends ActionController
 
         // create repository
         $this->repositoryName = str_replace('Model', 'Repository', $this->modelName) . 'Repository';
-
     }
 
     /**
@@ -114,7 +110,6 @@ class FormController extends ActionController
      */
     public function indexAction()
     {
-
     }
 
     /**
@@ -125,7 +120,6 @@ class FormController extends ActionController
      */
     public function createAction($values)
     {
-
         $lowerCaseModel = 'tx_subforms_domain_model_' . strtolower($this->modelName);
 
         // add to repository
@@ -144,7 +138,7 @@ class FormController extends ActionController
 
     /**
      * @param mixed $values
-     * @return boolean TRUE on success, otherwise false
+     * @return bool TRUE on success, otherwise false
      */
     protected function sendEmail($values)
     {
@@ -174,5 +168,4 @@ class FormController extends ActionController
         $message->send();
         return $message->isSent();
     }
-
 }

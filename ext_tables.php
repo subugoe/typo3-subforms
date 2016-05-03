@@ -21,7 +21,7 @@ $TCA['tx_subforms_domain_model_buecherwunsch'] = [
         'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/tx_subforms_domain_model_buecherwunsch.php',
         'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Img/tx_subforms_domain_model_buecherwunsch.png',
         'searchFields' => 'title',
-        'readOnly' => TRUE,
+        'readOnly' => true,
         'origUid' => 't3_origuid',
     ],
 ];
@@ -43,7 +43,7 @@ $TCA['tx_subforms_domain_model_feedback'] = [
         'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/tx_subforms_domain_model_feedback.php',
         'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Img/tx_subforms_domain_model_feedback.png',
         'searchFields' => 'email_address',
-        'readOnly' => TRUE,
+        'readOnly' => true,
     ],
 ];
 

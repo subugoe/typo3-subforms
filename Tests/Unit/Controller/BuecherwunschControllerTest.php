@@ -42,12 +42,11 @@ class Tx_Subforms_Controller_BuecherwunschControllerTest extends Tx_Extbase_Test
     protected $repository;
 
     /**
-     * @return void
      */
     public function setUp()
     {
         $class = 'Tx_Subforms_Controller_BuecherwunschController';
-        $this->fixture = $this->getMock($class, ['sendEmailThanks'], [], '', FALSE);
+        $this->fixture = $this->getMock($class, ['sendEmailThanks'], [], '', false);
 
         /**
          * @var $repository Tx_Subtabs_Domain_Repository_FaecherRepository
@@ -56,7 +55,6 @@ class Tx_Subforms_Controller_BuecherwunschControllerTest extends Tx_Extbase_Test
             'Tx_Subforms_Domain_Repository_BuecherwunschRepository',
             ['findAll', 'findByUid', 'update', 'add', 'remove', 'countAll']
         );
-
     }
 
     /**
@@ -64,14 +62,10 @@ class Tx_Subforms_Controller_BuecherwunschControllerTest extends Tx_Extbase_Test
      */
     public function testFachAnlage()
     {
-
         print_r($this->fixture);
 
         $i = 1;
 
         $this->assertEquals(1, $i);
     }
-
 }
-
-?>

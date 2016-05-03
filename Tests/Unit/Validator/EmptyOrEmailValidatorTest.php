@@ -78,7 +78,4 @@ class Tx_Subforms_Controller_BuecherwunschControllerTest extends Tx_Extbase_Test
     {
         $this->validator = $this->getValidator($options);
     }
-
 }
-
-?>

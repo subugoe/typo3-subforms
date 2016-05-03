@@ -67,11 +67,11 @@ class FeedbackController extends FormController
      * @param \Subugoe\Subforms\Domain\Model\Feedback $feedback
      * @dontvalidate $feedback
      */
-    public function indexAction(\Subugoe\Subforms\Domain\Model\Feedback $feedback = NULL)
+    public function indexAction(\Subugoe\Subforms\Domain\Model\Feedback $feedback = null)
     {
         parent::indexAction();
 
-        if ($feedback === NULL) {
+        if ($feedback === null) {
             $feedback = $this->feedbackModel;
         }
         if ($this->request->hasArgument('pageId')) {
@@ -87,12 +87,10 @@ class FeedbackController extends FormController
      * Creates the Feedback and triggers the E-Mail sending
      *
      * @param \Subugoe\Subforms\Domain\Model\Feedback $feedback
-     * @return void
      */
     public function createAction(\Subugoe\Subforms\Domain\Model\Feedback $feedback)
     {
         parent::createAction($feedback);
         $this->feedbackRepository->add($feedback);
     }
-
 }

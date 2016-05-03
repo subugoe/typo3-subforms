@@ -193,5 +193,3 @@ $TCA['tx_subforms_domain_model_buecherwunsch'] = [
         '1' => ['showitem' => '']
     ]
 ];
-
-?>

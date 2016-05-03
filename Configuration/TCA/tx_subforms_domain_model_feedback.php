@@ -76,5 +76,3 @@ $TCA['tx_subforms_domain_model_feedback'] = [
         '1' => ['showitem' => '']
     ]
 ];
-
-?>

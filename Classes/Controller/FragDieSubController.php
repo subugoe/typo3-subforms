@@ -64,9 +64,9 @@ class FragDieSubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
      * @param \Subugoe\Subforms\Domain\Model\FragDieSub $feedback
      * @dontvalidate $feedback
      */
-    public function indexAction(\Subugoe\Subforms\Domain\Model\FragDieSub $feedback = NULL)
+    public function indexAction(\Subugoe\Subforms\Domain\Model\FragDieSub $feedback = null)
     {
-        if ($feedback === NULL) {
+        if ($feedback === null) {
             $feedback = $this->feedbackmodel;
         }
 
@@ -95,7 +95,5 @@ class FragDieSubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
                 'subforms'));
         }
         $this->redirect('index');
-
     }
-
 }
