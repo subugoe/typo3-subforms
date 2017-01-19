@@ -1,15 +1,24 @@
 {
     "name": "subugoe/subforms",
+    "description": "Formular handling for sub website",
     "type": "typo3-cms-extension",
     "require-dev": {
         "codeception/codeception": "~2.0",
         "predis/predis": "~1.0"
     },
-    "license": "GPL",
+    "license": "GPL-2.0+",
     "authors": [
         {
             "name": "Ingo Pfennigstorf",
             "email": "i.pfennigstorf@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Subugoe\\Subforms\\": "Classes/"
+        }
+    },
+    "suggest": {
+        "predis/predis": "~1.0"
+    }
 }
