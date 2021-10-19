@@ -2,7 +2,7 @@
     "name": "subugoe/subforms",
     "type": "typo3-cms-extension",
     "require-dev": {
-        "codeception/codeception": "~2.0",
+        "codeception/codeception": "~3.1",
         "predis/predis": "~1.0"
     },
     "license": "GPL",
